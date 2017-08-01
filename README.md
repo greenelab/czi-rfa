@@ -9,3 +9,7 @@ I'd love to operate under a pull request + review model if I can find sufficient
 
 Thanks!
 Casey
+
+# Other related applications
+* [Elana Fertig](https://github.com/FertigLab/HCA)
+* [Loyal Goff](https://github.com/gofflab/czi-rfa-2017)
