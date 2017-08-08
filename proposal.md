@@ -12,9 +12,9 @@ Our objective is to determine whether or not these methods can be trained with s
 
 **Aim 1: Develop proof-of-concept deep learning methods to learn a latent space from single cell transcriptomic data from the HCA.**
 
-**Aim 2: Apply dimensionality reduction techniques that are not based on deep learning to learn low-dimensional representations of single cell transcriptomic data from the HCA.**
+**Aim 2: Evaluate the extent to which low-dimensional representations of single cell data learned by various methods can be used to decompose bulk tissues in the context of rheumatic diseases.**
 
-**Aim 3: Evaluate the extent to which low-dimensional representations of single cell data learned by various methods can be used to decompose bulk tissues in the context of rheumatic diseases.**
+**Aim 3: Evaluate the extent to which latent space arithmetic works in HCA benchmark datasets generated under this or other initiatives.**
 
 ## Prior Contributions / Preliminary Results (not required)
 
@@ -29,7 +29,6 @@ Our objective is to determine whether or not these methods can be trained with s
     * Bulk version -> single cell
     * Augmented training evaluated.
 * Application of deep NN -> HCA data.
-* Application of ADAGE/eADAGE/NMF/PCA/ICA/PLIER to HCA data.
 * Evaluation of models by application to rheumatic disease compendium
 * Evaluation of methods with regards to HCA benchmark datasets (TBD)
 
@@ -37,7 +36,7 @@ Our objective is to determine whether or not these methods can be trained with s
 
 * Biological grounding in the context of rheumatic disease (Mike Collab Network?)
 * Benchmark HCA datasets (ideal: many cell pops +/- some perturbations).
-    * Remove cell types from one perturbation -> eval extent to which latent space produces observations that match real observations.
+    * Computationally mask one or more cell types from one or more perturbations -> eval extent to which latent space arithmetic produces observations that match real observations.
 
 ## Statement of commitment to share
 
