@@ -1,0 +1,17 @@
+
+Human Cell Atlas' partnership with the Immunological Genome Project (immgenH) will result in gene expression-based immunocyte phenotyping at unprecedented resolution, making it well-suited for the problem of studying rheumatic/autoimmune disorders and for addressing the question of the interplay between tissue-resident immune cells and those cells infiltrating from peripheral blood in these disease states.
+
+We will apply Pathway-level Information ExtractoR (**PLIER**)([Mao ref](http://dx.doi.org/10.1101/116061)), which has been demonstrated to be effective in extracting cell type-specific signals from bulk gene expression data, to bulk autoimmune/rheumatic disease data. PLIER requires bulk expression data and prior knowledge as input. In this case, 
+we will encorporate cell subset and activation state information obtained from single-cell data as prior information (e.g., sets of genes that distinguish cell-types). (Note that this analysis framework is agnostic to the particular methodology used to generate low-dimensional representations of cell-types/states.) 
+
+### Evaluations
+
+We must evaluate PLIER's performance in addressing the subtle question of immune lineage phenotype and propose to do so in the following ways:
+
+1. **Simulation experiments** - We will evaluate PLIER for use in solid organs by generating simulated bulk data drawn from purified cell lineages, including non-immune lineages where available. We will combine purified cell expression data at different proportion levels and use single-cell-based cell type marker sets as prior information. This tests the hypothesis that cell type proportions can be estimated in heterogeneous, bulk solid organ data using PLIER and low-dimensional representations of single-cell data. Utilizing bulk pure cell expression from immune cell transcriptome projects (e.g., macrophage ([Xue ref](http://dx.doi.org/10.1016/j.immuni.2014.01.006))) that contain perturbations with many stimuli or stages of differentiation in our simulations will allow us to evaluate performance when highsimilar cell type states are added at different proportions.
+
+2. **Real data experiments** - Herein, we present one example of a real data experiment examining the immune-mediated skin disease psoriasis. Psoriasis skin biopsies are represented in publicly available bulk data. In addition, bulk expression data from purified non-immune skin-resident cells exposed to many perturbations (e.g., cytokines) are also available (see Simulation experiment above) ([Swindell ref](https://dx.doi.org/10.1186/1471-2164-14-527)). We also expect that psoriasis skin will have an increase _skin-resident_ memory T regulatory cells (mTregs) with a proliferative phenotype based on prior literature ([Rodriguez ref](https://doi.org/10.1172/JCI72932)). We will explicitly test for differences in resident mTreg signatures (latent variables) between skin from patiehts with psoriasis and healthy control skin to evaluate PLIER's ability to distinguish tissue-resident T cells from other subsets of T lymphocytes. We will also test for increased levels of keratinocyte activation and macrophage infiltration we expect to find in bulk data ([Swindell ref](https://dx.doi.org/10.1186/1471-2164-14-527)). 
+
+### Application to rheumatic/autoimmune data
+
+PLIER + cell-type subsets from single data to curated autoimmune/rheumatic disease data
