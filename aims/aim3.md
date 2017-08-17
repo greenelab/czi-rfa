@@ -6,7 +6,8 @@
 
 Generative models can approximate a lower dimensional manifold.
 These manifolds constrain datasets to occupy a small subset of total space and can contain vital information regarding data generating functions.
-Remarkably, certain classes of generative models, including variational autoencoders (VAE) and generative adversarial networks (GANs), that add a distribution matching constraint, imbue intuitive mathematical features to the learned latent features [1,2].
+For instance, the set of all possible pixel intensity combinations in a 28 x 28 image is far larger than the amount of pixel combinations that result in a representation of the number 7. This number has constant meaning, but there are multiple ways to express it. The distribution of ways to express the number 7 in pixel space can be captured by generative models that learn to approximate the underlying manifold.
+Certain classes of generative models, including variational autoencoders (VAE) and generative adversarial networks (GANs), that add a distribution matching constraint, imbue these and other intuitive mathematical features to the learned latent features [1,2].
 For instance, a recent GAN learned latent representations that could be manipulated with arithmetic: Subtracting out the essence of a smile from a woman and adding it to a neutral man resulted in an image vector of a smiling man [3].
 While image data have been extensively modeled, less is known about the learning capacity of such models applied to single cell gene expression data.
 The _objective of this aim_ is to assess the extent to which single cell gene expression latent spaces can be manipulated and how such manifold preserving properties will enable biological discovery regarding cell type, cellular differentiation, and disease perturbation.
