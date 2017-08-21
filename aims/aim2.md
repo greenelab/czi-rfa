@@ -1,0 +1,13 @@
+# Aim 2
+
+**To evaluate the extent to which low-dimensional representations of single cell data learned by various methods can be used to decompose tissues in the context of autoimmune/rheumatic.**
+
+## Background
+
+Human Cell Atlas' partnership with the Immunological Genome Project (immgenH) will result in gene expression-based immunocyte phenotyping at unprecedented resolution. A compendium comprised of bulk gene expression data from autoimmune/rheumatic diseases is exceptionally well-suited for the biologically-motivated evaluation (e.g., benchmarking) of these immunocyte data. The _objective of this aim_ is to evaluate methods, including VAEs and other methods developed through this initiative, for defining cell-type-specific expression signatures from single-cell data by measuring their performance in the context of decomposing bulk, whole-tissue autoimmune/rheumatic disease data. The quality of the cell-type-specific signatures (and by extension the methods) will be measured by the by using this information in deconvolution frameworks and in correctly identifying cell-type proportion and phenotype in the context of both simulation and real data experiments.
+
+## Approach
+
+We will generate simulated bulk datasets drawn from purified cell lineages, combining the purified cell expression data at different proportions. Bulk transcriptomes of homogenous cell types perturbed with many stimuli, such as those proposed by Arjun Raj's group, are well-suited for this experiment and will allow us to specifically evaluate performance with respect to cell-type proportion estimates and cell-type phenotype when highly similar cell type states are added at different proportions.
+
+The proposed autoimmune/rheumatic disease compendium (real data) will have desirable properties for evaluating single-cell data-derived signatures, as it will allow us to evaluate cell type proportions and phenotypes based on a body of previous literature. In addition, the compendium will include drug studies of highly-targeted therapeutics (e.g., a monoclonal antibody to IFN-gamma [anti-IFNg] in the context of systemic lupus erythematosus [[1](https://dx.doi.org/10.1002/art.39248)]). In the anti-IFNg example above, we might ask what cell-types change in proportion during the reduction of this cytokine or if the IFN-inducible expression is preferentially altered in one cell type. Such an experiment allows us to not only assess methods for defining cell-type from single-cell data, but also methods that may be useful in decomposing whole-tissue bulk data that are developed through this initiative such as latent space arithmetic (see aim 3, below).
