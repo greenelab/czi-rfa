@@ -10,7 +10,7 @@ Thus, the algorithms serve a dual purpose: (1) non-linear dimensionality reducti
 Applied to image data, the algorithms have shown much promise in generating realistic looking fake data and learning a lower dimensional representation that captures the underlying structure of high dimensional arrangements of pixels.
 Similarly, as applied to single cell gene expression data, such algorithms can learn complex biological features that enable cell-type segmentation and cell state interpolation.
 Previously, we have demonstrated the ability to train a VAE on bulk gene expression data to identify latent features with biological meaning [4].
-Others trained GANs on images of yeast cells and interpolated the learned latent space to model protein localization [5].
+Others have trained GANs on images of yeast cells and interpolated the learned latent space to model protein localization [5].
 Therefore, the _objective of this aim_ is to train a generative model on single cell gene expression features from the HCA demonstrating a proof of concept modeling approach.
 
 ## Approach
