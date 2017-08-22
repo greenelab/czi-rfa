@@ -13,7 +13,8 @@ The quality of the cell-type-specific signatures (and by extension the methods) 
 
 We will generate simulated bulk datasets drawn from purified cell lineages, combining the purified cell expression data at different proportions.
 We will use single-cell data-derived cell-type-specific signatures from different methods (e.g., VAEs, other methods developed through this initiative) as input to methods for decomposing bulk data and evaluate performance (e.g., prediction of proportions). 
-Bulk transcriptomes of homogenous cell types perturbed with many stimuli, such as those proposed by Arjun Raj's group, are well-suited for this experiment and will allow us to specifically evaluate performance with respect to cell-type proportion estimates and cell-type phenotype when highly similar cell-type states are added at different proportions.
+Bulk transcriptomes of homogenous cell-types perturbed with many stimuli, such as those proposed by Arjun Raj's group, are well-suited for this experiment.
+We will use these bulk data to compare cell-type proportion estimates across methods when highly similar cell-states (i.e., the same cell type under different conditions) are simulated at varying proportions.
 
 We estimate the proposed multi-tissue autoimmune/rheumatic disease compendium (real data) will contain over ten thousand samples and include samples from patients with systemic lupus erythematosus (SLE), sarcoidosis, and inflammatory bowel disorders (to name a few). 
 This compendium will have desirable properties for evaluating single-cell data-derived signatures, as it will allow us to evaluate cell type proportions and phenotypes based on a body of previous literature. 
