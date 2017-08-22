@@ -7,7 +7,7 @@
 Human Cell Atlas' partnership with the Immunological Genome Project (immgenH) will result in single-cell gene expression-based immunocyte phenotyping at unprecedented resolution.
 A compendium comprised of bulk gene expression data from autoimmune/rheumatic diseases is exceptionally well-suited for the biologically-motivated evaluation (e.g., benchmarking) of these immunocyte data.
 The _objective of this aim_ is to build such a compendium and to evaluate methods, including VAEs and other methods developed through this initiative, for defining cell-type-specific expression signatures from single-cell data by measuring their performance in the context of decomposing bulk, whole-tissue autoimmune/rheumatic disease data.
-The quality of the cell-type-specific signatures (and by extension the methods) will be measured by the by using this information in deconvolution frameworks and in correctly identifying cell-type proportion and phenotype in the context of both simulation and real data experiments.
+The quality of the cell-type-specific signatures (and by extension the methods) will be measured by using this information in deconvolution frameworks and in correctly identifying cell-type proportion and phenotype in the context of both simulation and real data experiments.
 
 ## Approach
 
