@@ -21,11 +21,12 @@ We will select optimal models based on minimizing reconstruction loss plus a KL 
 
 In addition, we will compare our optimized VAE to an alternative VAE we will train with an augmentation approach.
 A common image processing goal is to disentangle invariant features from a corpus of images.
-These invariant features are key, but the algorithms must learn how to extract them under various rotations, zoom, and other augmentations.
-Images can be resampled with artificial rotation and added back as input to deep models to encourage invariant feature learning.
-We will collaborate with Rob Patro's laboratory and pursue a similar approach applied to single cell gene expression: Rapid bootstrapping and subsampling of raw RNAseq reads to overcome transcript depth and rare transcript biases.
+These invariant features are key to describing the essence of the object in the image, but the algorithms must learn how to extract them under various rotations, zoom, and other augmentations.
+To encourage invariant feature learning, images can be resampled with artificial rotation and added back as input to training deep models [7].
+Therefore, we will collaborate with Rob Patro's laboratory and pursue a similar approach applied to single cell gene expression: Rapid subsampling and bootstrapping of raw RNAseq reads to overcome transcript depth and rare transcript biases.
+We posit that this augmented training approach will improve latent feature generalization not only by isolating specific cell-type invariance, but also by increasing sample size during training.
 
-We will evaluate our models using different transcriptome data from the HCA.
+We will evaluate our models using different transcriptomic data from the HCA.
 An example of such data would be provided by the laboratory of Arjun Raj.
 These data are bulk RNAseq of homogenized cell-types under various exogenous perturbations.
 With this data, we can ask how well our algorithms reconstruct held out, purified cell-type.
@@ -41,4 +42,5 @@ Once trained, we will distribute all reproducible algorithms for use by other gr
 4.  Gregor, K., Danihelka, I., Graves, A., Rezende, D. J., Wierstra, D. DRAW: A Recurrent Neural Network for Image Generation. ArXiv150204623 Cs Stat (2015).
 5.  Osokin, A., Chessel, A., Carazo Salas, R. E., & Vaggi, F. GANs for Biological Image Synthesis. ArXiv170804692 Cs Stat (2017).
 6.  Way, G. P., & Greene, C.S. Extracting a Biologically Relevant Latent Space from Cancer Transcriptomes with Variational Autoencoders. bioRxiv. https://doi.org/10.1101/174474 (2017).
+7.  Liao, Q., Leibo, J. Z., Poggio, T. Learning invariant representations and applications to face verification. Advances in Neural Information Processing Systems 26 (2013).
 
