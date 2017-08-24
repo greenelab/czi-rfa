@@ -15,24 +15,24 @@ Chris Probert noted on our proposal's GitHub repository [@url:https://github.com
 We will evaluate multiple types of reconstruction loss during training.
 These efforts will allow us to identify a subset of parameter combinations that are worth exploring with new approaches designed specifically for this type of genomic data.
 
-For single cell RNA-seq data, we also expect to be able to take advantage of data augmentation for the first time with genomic data.
-Data augmentation is widely used in image analysis, where the goal is to identify relevant features from a corpus of features that also have irrelevant differences.
+We will also develop a data augmentation approach for training deep models on single cell RNA-seq data.
+These approaches have not yet been applied to genomic data, but are widely used in image analysis, where the goal is to distinguish relevant from irrelevant features in an image corpus.
 To understand data augmentation, imagine pathology slides that have been scanned.
-Each slide may be prepared and scanned in a subtly different orientation depending on who generated the data or at somewhat different magnifications depending on the center that performed the imaging.
+Each slide may be prepared and scanned in a subtly different orientation or at somewhat different magnifications depending on who generated the data.
 A deep learning method may learn to identify these subtle differences, which is undesirable.
 It's also possible that there are simply too few slides to train a deep learning algorithm.
 To address these challenges, deep learning practitioners can apply arbitrary rotations, zooms, and other irrelevant transformations to image data during training.
 This process is called data augmentation.
 
 No data augmentation approaches for genomic data have been published to date.
-However, we expect that very fast abundance estimates [@doi:10.1038/nmeth.4197 @10.1038/nbt.3519] will make a data augmentation approach feasible in this domain as well.
+However, we expect that very fast abundance estimates from RNA-seq data [@doi:10.1038/nmeth.4197 @10.1038/nbt.3519] will make a data augmentation approach feasible in this domain as well.
 Resampling reads to generate abundance estimates can help to capture the uncertainty in the data, akin to arbitrary rotations.
 Subsampling reads to generate abundance estimates can help to capture changes related to sequencing depth but unrelated to the biology, akin to arbitrary zooms.
 Therefore, we plan to collaborate with Rob Patro's laboratory via our collaborative network to implement approaches including but not limited to rapid subsampling and bootstrapping to generate augmented training data.
-We posit that genomic data augmentation will improve latent feature generalization by isolating cell-type as opposed to technical features and increasing the effective sample size during training.
+We posit that genomic data augmentation will improve latent feature generalization by separating biological from technical features and increasing the effective sample size during training.
 
 We will evaluate these models on data held out during training.
-We will select high-quality models by choosing those that minimize both reconstruction loss and a KL divergence term which constrains the features to a Gaussian distribution [fav ref @gwaygenomics?].
+We will select high-quality models by choosing those that minimize both reconstruction loss and a KL divergence term which constrains the features to a Gaussian distribution [@arxiv:1312.6114].
 Models that exhibit desirable properties will be evaluated in the context of a rheumatic disease compendium (aim 2) as well as their suitability for latent space arithmetic (aim 3).
 
 #### References:
