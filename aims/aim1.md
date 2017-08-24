@@ -6,13 +6,14 @@ The _objective of this aim_ is to implement and test approaches to adapt deep ge
 Single cell data pose unique challenges, as well as opportunities, for deep neural network algorithms.
 Though each estimate of transcript abundance in each cell may include substantially more error than bulk samples, there are also many observations as numerous cells are often assayed.
 Also, the HCA project includes data from multiple cell types, so we expect substantial numbers of observations to be available.
-From our experience with generative deep neural networks [@doi:10.1101/159756], it can be difficult to predict precisely which advances will enable robust training in a specific context, particularly when the specific context has not been tackled before.
-We describe our standard approach here, as well as a few selected techniques that we anticipate will be helpful in this setting, but due to space constraints we may employ other strategies where warranted.
+From our experience with generative deep neural networks [@doi:10.1101/159756], we have found that it can be difficult to predict precisely which advances will enable robust training in a specific context, particularly when the specific context has not been tackled before.
+We describe our standard approach here, as well as a couple selected techniques that we anticipate will be particularly helpful in this setting such as zero-inflated loss and data augmentation, but we expect to also employ other strategies where warranted.
 
-Our standard approach is to first perform an extensive grid search to identify optimal VAE architecture and hyperparameters.
-Some parameter settings can be easily ruled out by a model that fails to train.
-We will evaluate multiple types of reconstruction loss in this setting.
-As we authored this on Github, Chris Probert noted [@url:https://github.com/greenelab/czi-rfa/issues/11] that numerous manuscripts demonstrated the advantages of zero-inflated loss in the setting of single cell sequencing data [@doi:10.1186/s13059-015-0805-z @arxiv:1610.05857 @doi:10.1186/s13059-017-1188-0].
+Our standard approach is to first perform an extensive grid search to identify VAE architectures and hyperparameters that are amenable to this context.
+Some parameter settings can be easily ruled out when models fail to train.
+Chris Probert noted on our proposal's GitHub repository [@url:https://github.com/greenelab/czi-rfa/issues/11] that numerous manuscripts demonstrated the advantages of zero-inflated loss in the setting of single cell sequencing data [@doi:10.1186/s13059-015-0805-z @arxiv:1610.05857 @doi:10.1186/s13059-017-1188-0].
+We will evaluate multiple types of reconstruction loss during training.
+These efforts will allow us to identify a subset of parameter combinations that are worth exploring with new approaches designed specifically for this type of genomic data.
 
 For single cell RNA-seq data, we also expect to be able to take advantage of data augmentation for the first time with genomic data.
 Data augmentation is widely used in image analysis, where the goal is to identify relevant features from a corpus of features that also have irrelevant differences.
