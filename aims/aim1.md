@@ -1,13 +1,11 @@
-# Aim 1:
+### Aim 1: Develop proof-of-concept unsupervised deep learning methods for single cell transcriptomic data from the HCA.
 
-**Develop proof-of-concept deep learning methods to learn a latent space from single cell transcriptomic data.**
-
-## Background
+#### Background
 
 Deep unsupervised models can generate hypothetical data by learning and decoding a lower dimensional latent space.
 The latent space of such models, including Restricted Boltzmann Machines (RBMs), Variational Autoencoders (VAEs), and Generative Adversarial Networks (GANs), preserves non-linear distances between data points and represents features that drive variation in the input data [1,2,3].
 Thus, the algorithms serve a dual purpose: (1) non-linear dimensionality reduction and (2) the ability to interpolate between data.
-Applied to image data, the algorithms, including the recurrent VAE DRAW network, have shown much promise in generating realistic looking fake data through the learning of a lower dimensional representation of different pixel arrangements [4]. 
+Applied to image data, the algorithms, including the recurrent VAE DRAW network, have shown much promise in generating realistic looking fake data through the learning of a lower dimensional representation of different pixel arrangements [4].
 Additionally, GANs trained on fluorescent microscopy images of yeast cells enable interpolation of the learned latent space to model cell-cycle protein localization [5].
 As applied to single cell gene expression data, we hypothesize that such algorithms can learn complex biological features that enable cell-type segmentation and cell state interpolation.
 Previously, we have demonstrated the ability to train a VAE on bulk gene expression data to identify latent biological features [6].
@@ -43,4 +41,3 @@ Once trained, we will distribute all reproducible algorithms for use by other gr
 5.  Osokin, A., Chessel, A., Carazo Salas, R. E., & Vaggi, F. GANs for Biological Image Synthesis. ArXiv170804692 Cs Stat (2017).
 6.  Way, G. P., & Greene, C.S. Extracting a Biologically Relevant Latent Space from Cancer Transcriptomes with Variational Autoencoders. bioRxiv. https://doi.org/10.1101/174474 (2017).
 7.  Liao, Q., Leibo, J. Z., Poggio, T. Learning invariant representations and applications to face verification. Advances in Neural Information Processing Systems 26 (2013).
-
