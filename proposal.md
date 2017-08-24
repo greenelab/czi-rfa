@@ -10,9 +10,9 @@ Our objective is to determine whether or not these methods can be trained with s
 
 ## Aims
 
-**Aim 1: Develop proof-of-concept deep learning methods to learn a latent space from single cell transcriptomic data from the HCA.**
+**Aim 1: Develop proof-of-concept unsupervised deep learning methods for single cell transcriptomic data from the HCA.**
 
-**Aim 2: Evaluate the extent to which low-dimensional representations of single cell data learned by various methods can be used to decompose bulk tissues in the context of rheumatic diseases.**
+**Aim 2: Generate a benchmark dataset of harmonized public data to evaluate the extent to which HCA cell types capture disease states for multiple rheumatic diseases.**
 
 **Aim 3: Evaluate the extent to which latent space arithmetic works in HCA benchmark datasets generated under this or other initiatives.**
 
@@ -21,7 +21,6 @@ Our objective is to determine whether or not these methods can be trained with s
 * ADAGE/eADAGE
 * GANs + clinical data
 * Variational Autoencoders
-* Scleroderma pubs -> cell lineage importance
 
 ## Proposed work and deliverables
 
