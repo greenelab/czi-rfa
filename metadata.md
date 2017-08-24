@@ -1,5 +1,5 @@
 
-* Title: Genome-wide hypothesis generation for single-cell expression via deep neural network defined latent spaces
+* Title: Genome-wide hypothesis generation for single-cell expression via latent spaces of deep neural networks
 * Keywords: gene expression, deep learning, unsupervised, latent space, hypothesis generating
 * Relevant citations:
   * Tan J, Doing G, Lewis KA, Price CE, Chen KM, Cady KC, Perchuk B, Laub MT, Hogan DA, Greene CS. Unsupervised extraction of stable expression signatures from public compendia with an ensemble of neural networks. _Cell Systems_. 5:63-71. PMID:[28711280](https://www.ncbi.nlm.nih.gov/pubmed/28711280)
