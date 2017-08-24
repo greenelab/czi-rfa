@@ -14,7 +14,7 @@ Our objective is to determine whether or not these methods can be trained with s
 
 **Aim 2: Generate a benchmark dataset of harmonized public data to evaluate the extent to which HCA cell types capture disease states for multiple rheumatic diseases.**
 
-**Aim 3: Evaluate the extent to which latent space arithmetic works in HCA benchmark datasets generated under this or other initiatives.**
+**Aim 3: Evaluate the extent to which models that create reduced representations enable latent space arithmetic in the HCA.**
 
 ## Prior Contributions / Preliminary Results (not required)
 
