@@ -1,12 +1,17 @@
 ## Summary
 
-A latent space is a low-dimensional representation of meaningful sources of variability in a dataset.
-Latent spaces can be sampled to provide meaningful interpolations between examples.
-Latent spaces of image datasets can be used to transition a picture of a young man to a female representation or to an older version of the subject.
+Certain types of deep unsupervised neural networks, including Restricted Boltzmann Machines (RBMs) [1], Variational Autoencoders (VAEs) [@arxiv:1312.6114], and Generative Adversarial Networks (GANs) [@arxiv:1406.2661], can generate hypothetical data by learning and decoding a lower dimensional latent space.
+This latent space preserves non-linear distances between data points and represents features that drive variation in the input data.
+An ideal latent space enables arithmetic operations that use data to produce novel transformations.
+Models of image data, such as the "DRAW" network, produce realistic looking fake images through the learning of a lower dimensional representation of different pixel arrangements [4].
+GANs trained on fluorescent microscopy images of yeast cells enable interpolation within the learned latent space to model cell-cycle protein localization [5].
+A fun and intuitive example of this is FaceApp, which is capable of modifying a picture of an individual to produce an image of the subject at an older age, with a different expression, or of a different gender [6].
+
+Generative deep neural network models that produce meaningful latent spaces can serve two purposes: (1) non-linear dimensionality reduction and (2) the ability to generate hypothetical data.
 Biologically relevant latent spaces provide an opportunity for hypothesis generation on a genome-wide scale.
-For example, we could imagine that we might predict how gene expression would change over time, with drug treatment, in the context of a specific disease, or a combination of these factors.
-Certain deep learning methods are capable of constructing meaningful latent spaces in other fields.
-Our objective is to determine whether or not these methods can be trained with single cell expression data and the extent to which such methods define biologically-relevant latent spaces.
+For example, we could imagine that we might predict how gene expression would change for each cell type measured in the human cell atlas with drug treatment, in the context of a specific genetic variant, with a specific disease, or as a combination of these and other factors.
+
+Our _overall objective_ is to determine whether or not unsupervised deep neural network models can be trained with single cell expression data and the extent to which such methods define biological latent spaces that capture disease states and other perturbations.
 
 ## Aims
 
@@ -34,7 +39,7 @@ Our objective is to determine whether or not these methods can be trained with s
 
 ## Proposal for evaluation and dissemination.
 
-* Biological grounding in the context of rheumatic disease (Mike Collab Network?)
+* Biological grounding in the context of rheumatic disease
 * Benchmark HCA datasets (ideal: many cell pops +/- some perturbations).
     * Computationally mask one or more cell types from one or more perturbations -> eval extent to which latent space arithmetic produces observations that match real observations.
 
@@ -48,3 +53,12 @@ We look forward to sharing our proposals, methods, data, and code with other res
 * We will share source code for our software under the BSD 3-clause license. If we are contributing changes to software with a different open license, we will use that license. To avoid a situation where our work cannot be shard, we will not contribute to software with any license that has not been approved by the OSI as an open source license.
 
 We would consider sharing any of these elements under more permissive licenses if requested by CZI.
+
+# References (non-doi)
+1.  Smolensky, P. Information processing in dynamical systems: Foundations of harmony theory. In D. Rumelhart and J. McClelland
+(Eds.), Parallel distributed processing, vol. 1, chapter 6, 194–281. Cambridge: MIT Press (1986).
+4.  Gregor, K., Danihelka, I., Graves, A., Rezende, D. J., Wierstra, D. DRAW: A Recurrent Neural Network for Image Generation. ArXiv150204623 Cs Stat (2015).
+5.  Osokin, A., Chessel, A., Carazo Salas, R. E., & Vaggi, F. GANs for Biological Image Synthesis. ArXiv170804692 Cs Stat (2017).
+6.  FaceApp - Free Neural Face Transformation Filters. Accessed 2017-08-24. https://www.faceapp.com
+7.  Way, G. P., & Greene, C.S. Extracting a Biologically Relevant Latent Space from Cancer Transcriptomes with Variational Autoencoders. bioRxiv. https://doi.org/10.1101/174474 (2017).
+8.  Liao, Q., Leibo, J. Z., Poggio, T. Learning invariant representations and applications to face verification. Advances in Neural Information Processing Systems 26 (2013).
