@@ -12,6 +12,7 @@ Biologically relevant latent spaces provide an opportunity for hypothesis genera
 For example, we could imagine that we might predict how gene expression would change for each cell type measured in the human cell atlas with drug treatment, in the context of a specific genetic variant, with a specific disease, or as a combination of these and other factors.
 
 Our _overall objective_ is to determine whether or not unsupervised deep neural network models can be trained with single cell expression data and the extent to which such methods define biological latent spaces that capture disease states and other perturbations.
+The _rationale_ is that latent space arithmetic would enable researchers to generate hypothetical cells under simulated perturbation for rapid discovery-oriented analyses probing cell-type, cellular differentiation.
 
 ## Aims
 
@@ -41,6 +42,8 @@ Our _overall objective_ is to determine whether or not unsupervised deep neural 
 * Biological grounding in the context of rheumatic disease
 * Benchmark HCA datasets (ideal: many cell pops +/- some perturbations).
     * Computationally mask one or more cell types from one or more perturbations -> eval extent to which latent space arithmetic produces observations that match real observations.
+
+
 
 ## Statement of commitment to share
 
