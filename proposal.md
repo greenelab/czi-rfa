@@ -43,8 +43,6 @@ The _rationale_ is that latent space arithmetic would enable researchers to gene
 * Benchmark HCA datasets (ideal: many cell pops +/- some perturbations).
     * Computationally mask one or more cell types from one or more perturbations -> eval extent to which latent space arithmetic produces observations that match real observations.
 
-
-
 ## Statement of commitment to share
 
 We look forward to sharing our proposals, methods, data, and code with other researchers funded by this RFA, with CZI, and with the broader research community.
