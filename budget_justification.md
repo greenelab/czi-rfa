@@ -1,39 +1,32 @@
-* Casey Greene, PhD
-(PI).
+**Casey Greene, PhD (PI).**
 _1.2 Cal Months_.
     * Short bio.
     * cgreene on github.
     * Dr. Greene has primary responsibility for managing and carrying out the proposed research, interpreting findings, disseminating findings, and preparing and submitting progress reports.
 
-* Gregory Way, MS
-(GCB Graduate Student).
+**Gregory Way, MS (GCB Graduate Student).**
 _4.2 Cal Months_.
     * Short bio.
     * gwaygenomics on github.
     * Also partially supported by T32 for latent space methods for cancer datasets (thus only 35%)
     * Adaptation of deep learning methods -> single cell (w/ Qiwen)
 
-* Qiwen Hu, PhD
-(Postdoctoral Researcher).
+**Qiwen Hu, PhD (Postdoctoral Researcher).**
 _6.0 Cal Months_.
     * Short bio
     * huqiwen0313 on github.
     * Adaptation of deep learning methods -> single cell (w/ Greg)
     * Evaluation of deep learning methods on HCA data.
 
-* Jaclyn Taroni, PhD
-(Postdoctoral Researcher).
+**Jaclyn Taroni, PhD (Postdoctoral Researcher).**
 _2.4 Cal Months_.
     * Short bio.
     * jaclyn-taroni on github.
     * Evaluation for bio relevance to rheumatic disease bulk dataset compendia
 
-* Rene Zelaya, BS
-(Programmer).
-_0.6 Cal Months_.
-    * Code review
-    * rzelayafavila on github.
-    * Very light software work
+**Software Engineer TBN**, _0.6 Cal Months_.
+One of the lab's four programmers or software engineers will work to improve the robustness of software and facilitate interactions with the CZI group.
+The programmer will provide code review, assistance with software engineering questions, and will help the primary authors of source code on the project (Greg, Qiwen, and Jaclyn) develop source code that is ready for handover to the CZI Engineering team as circumstances warrant.
 
 * Computing
 (AWS, Google, or equivalent).
