@@ -221,10 +221,18 @@ _1.2 Cal Months_.
 
 **Gregory Way, MS (GCB Graduate Student).**
 _4.2 Cal Months_.
-    * Short bio.
-    * gwaygenomics on github.
-    * Also partially supported by T32 for latent space methods for cancer datasets (thus only 35%)
-    * Adaptation of deep learning methods -> single cell (w/ Qiwen)
+
+Gregory Way is a graduate student in the Genomics and Computational Biology PhD program at the University of Pennsylvania performing thesis research in Dr. Greene's laboratory.
+Mr. Way has developed supervised and unsupervised methods to extract knowledge from bulk cancer transcriptomes, including the training of a VAE.
+He will, with Dr. Greene, extend this VAE to learn single cell features.
+He is the first author on the bulk VAE manuscript that serves as preliminary data for Aim 1.
+Together with Dr. Hu, he will be responsible for developing Aim 1 – namely, training an optimal single cell VAE with an augmentation approach.
+He will also lead the latent space arithmetic approach proposed in Aim 3.
+Mr. Way will participate in experimental design, analysis, and manuscript preparation.
+
+  - gwaygenomics on github.
+  - Also partially supported by T32 for latent space methods for cancer datasets (thus only 35%)
+  - Adaptation of deep learning methods -> single cell (w/ Qiwen)
 
 **Qiwen Hu, PhD (Postdoctoral Researcher).**
 _6.0 Cal Months_.
