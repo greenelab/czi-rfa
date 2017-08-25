@@ -14,6 +14,13 @@ _4.2 Cal Months_.
 **Qiwen Hu, PhD (Postdoctoral Researcher).**
 _6.0 Cal Months_.
     * Short bio
+     Qiwen Hu is a postdoc at the University of Pennsylvania in Dr. Greene's laboratory.
+     Dr.Hu has developed supervised and unsupervised methods to learn genomic translational regulatory features.
+     She will, with Dr. Greene, extend the methods to learn single cell features.
+     Together with Mr. Way, she will be responsible for developing Aim 1 – namely, training an optimal single cell VAE with an augmentation approach.
+     She will also work on the latent space arithmetic approach proposed in Aim 3.
+     Dr. Hu will participate in experimental design, analysis, and manuscript preparation.
+
     * huqiwen0313 on github.
     * Adaptation of deep learning methods -> single cell (w/ Greg)
     * Evaluation of deep learning methods on HCA data.
