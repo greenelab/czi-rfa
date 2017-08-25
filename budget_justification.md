@@ -1,39 +1,39 @@
-* Casey Greene, PhD
-(PI).
+**Casey Greene, PhD (PI).**
 _1.2 Cal Months_.
     * Short bio.
     * cgreene on github.
     * Dr. Greene has primary responsibility for managing and carrying out the proposed research, interpreting findings, disseminating findings, and preparing and submitting progress reports.
 
-* Gregory Way, MS
-(GCB Graduate Student).
+**Gregory Way, MS (GCB Graduate Student).**
 _4.2 Cal Months_.
     * Short bio.
     * gwaygenomics on github.
     * Also partially supported by T32 for latent space methods for cancer datasets (thus only 35%)
     * Adaptation of deep learning methods -> single cell (w/ Qiwen)
 
-* Qiwen Hu, PhD
-(Postdoctoral Researcher).
+**Qiwen Hu, PhD (Postdoctoral Researcher).**
 _6.0 Cal Months_.
     * Short bio
+     Qiwen Hu is a postdoc at the University of Pennsylvania in Dr. Greene's laboratory.
+     Dr.Hu has developed supervised and unsupervised methods to learn genomic translational regulatory features.
+     She will, with Dr. Greene, extend the methods to learn single cell features.
+     Together with Mr. Way, she will be responsible for developing Aim 1 – namely, training an optimal single cell VAE with an augmentation approach.
+     She will also work on the latent space arithmetic approach proposed in Aim 3.
+     Dr. Hu will participate in experimental design, analysis, and manuscript preparation.
+
     * huqiwen0313 on github.
     * Adaptation of deep learning methods -> single cell (w/ Greg)
     * Evaluation of deep learning methods on HCA data.
 
-* Jaclyn Taroni, PhD
-(Postdoctoral Researcher).
+**Jaclyn Taroni, PhD (Postdoctoral Researcher).**
 _2.4 Cal Months_.
     * Short bio.
     * jaclyn-taroni on github.
     * Evaluation for bio relevance to rheumatic disease bulk dataset compendia
 
-* Rene Zelaya, BS
-(Programmer).
-_0.6 Cal Months_.
-    * Code review
-    * rzelayafavila on github.
-    * Very light software work
+**Software Engineer TBN**, _0.6 Cal Months_.
+One of the lab's four programmers or software engineers will work to improve the robustness of software and facilitate interactions with the CZI group.
+The programmer will provide code review, assistance with software engineering questions, and will help the primary authors of source code on the project (Greg, Qiwen, and Jaclyn) develop source code that is ready for handover to the CZI Engineering team as circumstances warrant.
 
 * Computing
 (AWS, Google, or equivalent).
