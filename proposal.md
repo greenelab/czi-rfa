@@ -34,25 +34,25 @@ Our collaborative network includes a number of groups responding to this RFA. Th
 * Casey Greene (PI)
 * Qiwen Hu (Postdoc)
 * Jaclyn Taroni (Postdoc)
-* Gregory Way (Student)
+* Gregory Way (Graduate Student)
 
 ## Proposal
 
 ### Summary
 
-Certain types of deep unsupervised neural networks, including Restricted Boltzmann Machines (RBMs) [1], Variational Autoencoders (VAEs) [@arxiv:1312.6114], and Generative Adversarial Networks (GANs) [@arxiv:1406.2661], can generate hypothetical data by learning and decoding a lower dimensional latent space.
+Certain types of deep unsupervised neural networks, including Restricted Boltzmann Machines (RBMs) [@url:http://dl.acm.org/citation.cfm?id=104290], Variational Autoencoders (VAEs) [@arxiv:1312.6114], and Generative Adversarial Networks (GANs) [@arxiv:1406.2661], can generate hypothetical data by learning and decoding a lower dimensional latent space.
 This latent space preserves non-linear distances between data points and represents features that drive variation in the input data.
 An ideal latent space enables arithmetic operations that use data to produce novel transformations.
-Models of image data, such as the "DRAW" network, produce realistic looking fake images through the learning of a lower dimensional representation of different pixel arrangements [4].
-GANs trained on fluorescent microscopy images of yeast cells enable interpolation within the learned latent space to model cell-cycle protein localization [5].
-A fun and intuitive example of this is FaceApp, which is capable of modifying a picture of an individual to produce an image of the subject at an older age, with a different expression, or of a different gender [6].
+Models of image data, such as the "DRAW" network, produce realistic looking fake images through the learning of a lower dimensional representation of different pixel arrangements [@doi:1502.04623].
+GANs trained on fluorescent microscopy images of yeast cells enable interpolation within the learned latent space to model cell-cycle protein localization [@doi:1708.04692].
+A fun and intuitive example of this is FaceApp, which is capable of modifying a picture of an individual to produce an image of the subject at an older age, with a different expression, or of a different gender [@url:https://www.faceapp.com].
 
 Generative deep neural network models that produce meaningful latent spaces can serve two purposes: (1) non-linear dimensionality reduction and (2) the ability to generate hypothetical data.
 Biologically relevant latent spaces provide an opportunity for hypothesis generation on a genome-wide scale.
 For example, we could imagine that we might predict how gene expression would change for each cell type measured in the human cell atlas with drug treatment, in the context of a specific genetic variant, with a specific disease, or as a combination of these and other factors.
 
 Our _overall objective_ is to determine whether or not unsupervised deep neural network models can be trained with single cell expression data and the extent to which such methods define biological latent spaces that capture disease states and other perturbations.
-The _rationale_ is that latent space arithmetic would enable researchers to generate hypothetical cells under simulated perturbation for rapid discovery-oriented analyses probing cell-type, cellular differentiation.
+The _rationale_ is that latent space arithmetic would enable researchers to use HCA data to generate hypothetical cells under simulated perturbation for rapid discovery-oriented analyses probing cell type, cellular differentiation, and other processes.
 
 ### Aims
 
@@ -68,17 +68,19 @@ The _rationale_ is that latent space arithmetic would enable researchers to gene
 
 > Supporting analytical methods and machine learning approaches to solving problems such as multimodal integration, inference of state transitions and developmental trajectories, and representation of spatial relationships at the cellular or molecular level
 
-### Prior Contributions / Preliminary Results (not required)
+### Prior Contributions / Preliminary Results
 
-* ADAGE/eADAGE
-* GANs + clinical data
-* Variational Autoencoders
+We have developed a number of methods to integrate transcriptomic data compendia with neural networks [@doi:10.1128/mSystems.00025-15 @doi:10.1016/j.cels.2017.06.003 @doi:10.1101/156620].
+We've recently moved to generative models, which in the field of image analysis define meaningful latent spaces.
+We found that GANs, with some additional steps, can generate realistic shareable samples from individual clinical trials records under a differential privacy framework [@doi:10.1101/159756].
+In recent work, we've constructed VAEs over bulk transcriptomic data with the goal of describing a biologically-relevant latent space [@doi:10.1101/174474].
+In this work, we will apply these unsupervised deep learning methods to single cell transcriptomic data, while incorporating data augmentation approaches that are novel to genomics.
+We also bring expertise automating reproducible workflows to the HCA community [@doi:10.1038/nbt.3780].
 
 ### Proposed work and deliverables
 
 #### Aim 1: Develop proof-of-concept unsupervised deep learning methods for single cell transcriptomic data from the HCA.
 
-Previously, we have demonstrated the ability to train a VAE on bulk gene expression data to identify latent biological features [7].
 The _objective of this aim_ is to implement and test approaches to adapt deep generative models, such as VAEs or GANs, to HCA-produced single cell gene expression data.
 
 Single cell data pose unique challenges, as well as opportunities, for deep neural network algorithms.
@@ -113,18 +115,6 @@ We will evaluate these models on data held out during training.
 We will select high-quality models by choosing those that minimize both reconstruction loss and a KL divergence term which constrains the features to a Gaussian distribution [@arxiv:1312.6114].
 Models that exhibit desirable properties will be evaluated in the context of a rheumatic disease compendium (aim 2) as well as their suitability for latent space arithmetic (aim 3).
 
-##### References:
-
-1.  Smolensky, P. Information processing in dynamical systems: Foundations of harmony theory. In D. Rumelhart and J. McClelland
-(Eds.), Parallel distributed processing, vol. 1, chapter 6, 194–281. Cambridge: MIT Press (1986).
-2.  Kingma, D. P. & Welling, M. Auto-Encoding Variational Bayes. ArXiv13126114 Cs Stat (2013).
-3.  Goodfellow, I. J. et al. Generative Adversarial Networks. ArXiv14062661 Cs Stat (2014).
-4.  Gregor, K., Danihelka, I., Graves, A., Rezende, D. J., Wierstra, D. DRAW: A Recurrent Neural Network for Image Generation. ArXiv150204623 Cs Stat (2015).
-5.  Osokin, A., Chessel, A., Carazo Salas, R. E., & Vaggi, F. GANs for Biological Image Synthesis. ArXiv170804692 Cs Stat (2017).
-6.  FaceApp - Free Neural Face Transformation Filters. Accessed 2017-08-24. https://www.faceapp.com
-7.  Way, G. P., & Greene, C.S. Extracting a Biologically Relevant Latent Space from Cancer Transcriptomes with Variational Autoencoders. bioRxiv. https://doi.org/10.1101/174474 (2017).
-8.  Liao, Q., Leibo, J. Z., Poggio, T. Learning invariant representations and applications to face verification. Advances in Neural Information Processing Systems 26 (2013).
-
 #### Aim 2: Evaluate the extent to which low-dimensional representations of single cell data learned by various methods can be used to decompose bulk tissues in the context of rheumatic diseases.**
 
 The HCA's partnership with the Immunological Genome Project (immgenH) will provide single-cell gene expression-based immunocyte phenotyping at an unprecedented resolution.
@@ -153,17 +143,16 @@ Importantly, a bulk compendium comprised of public data from a disease context w
 #### Aim 3: Evaluate the extent to which models that create reduced representations enable latent space arithmetic in the HCA.
 
 Latent features describe a lower dimensional representation of input data and there are many dimensionality reduction methods, including principal components analysis (PCA) and non-negative matrix factorization (NMF).
-Certain classes of generative deep neural network models, including VAEs and GANs, add a distribution matching constraint that can imbue intuitive mathematical features to the learned latent features [1,2].
-For instance, a GAN learned latent features that could be manipulated with arithmetic: Subtracting out the essence of a smile from a woman and adding it to a neutral man resulted in an image vector of a smiling man [3].
+Certain classes of generative deep neural network models, including VAEs and GANs, add a distribution matching constraint that can imbue intuitive mathematical features to the learned latent features [@arxiv:1312.6114 @arxiv:1406.2661].
+For instance, a GAN learned latent features that could be manipulated with arithmetic: Subtracting out the essence of a smile from a woman and adding it to a neutral man resulted in an image vector of a smiling man [@arxiv:1511.06434].
 We will assess the extent to which single cell gene expression latent spaces aggregated from deep generative neural networks can be manipulated mathematically.
 The _objective of this aim_ is to test the hypothesis that arithmetic in the latent space will accurately predict gene expression values of perturbation experiments in specific cell types.
-
 
 We will construct latent spaces with linear (PCA, NMF) and nonlinear methods (ADAGE, deep VAE models from Aim 1) as well as other relevant methods from groups funded under this initiative.
 We will test latent space arithmetic using benchmark data that contains parallel perturbations, which allows us to hold out one or more perturbations for one or more cell types to evaluate each method.
 We describe two experiments using data proposed by Arjun Raj's group, but any HCA benchmark datasets with similar properties will be suitable.
 
-The differentiation of cardiomyocytes from fibroblasts is well studied, and the driving transcription factors have been identified [4], and the Raj lab proposes to generate data related to this process.
+The differentiation of cardiomyocytes from fibroblasts is well studied, and the driving transcription factors have been identified [@doi:10.1016/j.cell.2010.07.002], and the Raj lab proposes to generate data related to this process.
 We will use these data to test the hypothesis that latent space vectors capture key transcription factor networks (Gata4, Mef2c, and Tbx5) known to drive the transition.
 First, we will obtain the latent space projections of isolated human fibroblasts and cardiomyocytes.
 Subtracting the mean latent space representation vector of fibroblasts from the cardiomyocyte latent vector will provide a differentiation vector.
@@ -176,12 +165,6 @@ Adding the perturbation vector to one of the cell types for which the perturbati
 We will compare the results to the held out data to determine the extent to which measurements capture the cell type after perturbation.
 We will compare results with each latent space to the baseline method of performing the same subtraction operations in raw gene expression space.
 
-##### References:
-
-1.	Kingma, D. P. & Welling, M. Auto-Encoding Variational Bayes. ArXiv13126114 Cs Stat (2013).
-2.	Goodfellow, I. J. et al. Generative Adversarial Networks. ArXiv14062661 Cs Stat (2014).
-3.	Radford, A., Metz, L. & Chintala, S. Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks. ArXiv151106434 Cs (2015).
-4.  Ieda, M. et al. Direct Reprogramming of Fibroblasts into Functional Cardiomyocytes by Defined Factors. Cell 142, 375–386 (2010).
 
 ### Proposal for evaluation and dissemination.
 
@@ -193,10 +176,9 @@ We will compare results with each latent space to the baseline method of perform
 
 We look forward to sharing our proposals, methods, data, and code with other researchers funded by this RFA, with CZI, and with the broader research community.
 
-* We are already sharing our proposal under a CC-BY license as it is being written.
+* We have shared our proposal under a CC-BY license as it was being written.
 * We will share our description of methods, written reports, figures, and other such outputs under a CC-BY license.
-* We will share any resulting data under a CC0 license to make our intention to share clear, though it is worth noting that in the US much of this data would not seem to be copyrightable.
-* We will share source code for our software under the BSD 3-clause license. If we are contributing changes to software with a different open license, we will use that license. To avoid a situation where our work cannot be shard, we will not contribute to software with any license that has not been approved by the OSI as an open source license.
+* We will share source code for our software under the BSD 3-clause license.
 
 We would consider sharing any of these elements under more permissive licenses if requested by CZI.
 
