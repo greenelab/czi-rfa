@@ -1,36 +1,3 @@
-**Casey Greene, PhD (PI).**
-_1.2 Cal Months_.
-    * Short bio.
-    * cgreene on github.
-    * Dr. Greene has primary responsibility for managing and carrying out the proposed research, interpreting findings, disseminating findings, and preparing and submitting progress reports.
-
-**Gregory Way, MS (GCB Graduate Student).**
-_4.2 Cal Months_.
-    * Short bio.
-    * gwaygenomics on github.
-    * Also partially supported by T32 for latent space methods for cancer datasets (thus only 35%)
-    * Adaptation of deep learning methods -> single cell (w/ Qiwen)
-
-**Qiwen Hu, PhD (Postdoctoral Researcher).**
-_6.0 Cal Months_.
-    * Short bio
-     Qiwen Hu is a postdoc at the University of Pennsylvania in Dr. Greene's laboratory.
-     Dr.Hu has developed supervised and unsupervised methods to learn genomic translational regulatory features.
-     She will, with Dr. Greene, extend the methods to learn single cell features.
-     Together with Mr. Way, she will be responsible for developing Aim 1 – namely, training an optimal single cell VAE with an augmentation approach.
-     She will also work on the latent space arithmetic approach proposed in Aim 3.
-     Dr. Hu will participate in experimental design, analysis, and manuscript preparation.
-
-    * huqiwen0313 on github.
-    * Adaptation of deep learning methods -> single cell (w/ Greg)
-    * Evaluation of deep learning methods on HCA data.
-
-**Jaclyn Taroni, PhD (Postdoctoral Researcher).**
-_2.4 Cal Months_.
-    * Short bio.
-    * jaclyn-taroni on github.
-    * Evaluation for bio relevance to rheumatic disease bulk dataset compendia
-
 **Software Engineer TBN**, _0.6 Cal Months_.
 One of the lab's four programmers or software engineers will work to improve the robustness of software and facilitate interactions with the CZI group.
 The programmer will provide code review, assistance with software engineering questions, and will help the primary authors of source code on the project (Greg, Qiwen, and Jaclyn) develop source code that is ready for handover to the CZI Engineering team as circumstances warrant.
@@ -48,9 +15,13 @@ $1500.
 We have already purchased access to a set of GPU computing machines at Penn that will be available for the duration of this grant.
 However, we expect to add mid-range GPUs to our existing desktop machines so that each member of the project team can run test code on their local machines for small proof-of-concept experiments.
 
+* Travel (2 x 1-day Bay Area Meetings).
+$3500.
+This will fund the PI's travel to the SF Bay Area for two one-day in person discussions related to this grant.
+
 * CZI Engineering
 (Not Budgeted)
 We will not, under this application, plan to develop software intended for broad use.
-In the event that we identify methods that are suitable for broad application, we hope to work with the engineering team at CZI to produce software for this purpose.
+In the event that we develop methods that are suitable for broad application, we hope to work with the engineering team at CZI to produce software for this purpose.
 To make sure that CZI engineers will be working with well-structured proof-of-concept code, we perform code review of our analytical code.
-We have budgeted a very modest commitment from a professional programmer to aid in these efforts.
+We have also budgeted a very modest commitment from a professional programmer to aid in these efforts.

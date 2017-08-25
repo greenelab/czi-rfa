@@ -213,7 +213,6 @@ We would consider sharing any of these elements under more permissive licenses i
 
 **Casey Greene, PhD (PI).**
 _1.2 Cal Months_.
-    * Short bio.
     * cgreene on github.
     * Dr. Greene has primary responsibility for managing and carrying out the proposed research, interpreting findings, disseminating findings, and preparing and submitting progress reports.
 
@@ -221,8 +220,7 @@ _1.2 Cal Months_.
 
 **Gregory Way, MS (GCB Graduate Student).**
 _4.2 Cal Months_.
-
-Gregory Way is a graduate student in the Genomics and Computational Biology PhD program at the University of Pennsylvania performing thesis research in Dr. Greene's laboratory.
+Gregory Way (gwaygenomics on GitHub) is a graduate student in the Genomics and Computational Biology PhD program at the University of Pennsylvania performing thesis research in Dr. Greene's laboratory.
 Mr. Way has developed supervised and unsupervised methods to extract knowledge from bulk cancer transcriptomes, including the training of a VAE.
 He will, with Dr. Greene, extend this VAE to learn single cell features.
 He is the first author on the bulk VAE manuscript that serves as preliminary data for Aim 1.
@@ -230,24 +228,21 @@ Together with Dr. Hu, he will be responsible for developing Aim 1 – namely, tr
 He will also lead the latent space arithmetic approach proposed in Aim 3.
 Mr. Way will participate in experimental design, analysis, and manuscript preparation.
 
-  - gwaygenomics on github.
-  - Also partially supported by T32 for latent space methods for cancer datasets (thus only 35%)
-  - Adaptation of deep learning methods -> single cell (w/ Qiwen)
-
 **Qiwen Hu, PhD (Postdoctoral Researcher).**
 _6.0 Cal Months_.
-    * Short bio
-    * huqiwen0313 on github.
-    * Adaptation of deep learning methods -> single cell (w/ Greg)
-    * Evaluation of deep learning methods on HCA data.
+Qiwen Hu (huqiwen0313 on GitHub) is a postdoc at the University of Pennsylvania in Dr. Greene's laboratory.
+Dr.Hu has developed supervised and unsupervised methods to learn genomic translational regulatory features.
+She will, with Dr. Greene, extend the methods to learn single cell features.
+Together with Mr. Way, she will be responsible for developing Aim 1 – namely, training an optimal single cell VAE with an augmentation approach.
+She will also work on the latent space arithmetic approach proposed in Aim 3.
+Dr. Hu will participate in experimental design, analysis, and manuscript preparation.
 
 **Jaclyn Taroni, PhD (Postdoctoral Researcher).**
 _2.4 Cal Months_.
-Jaclyn Taroni is a postdoctoral researcher in the Dr. Greene’s laboratory. 
-Dr. Taroni has expertise in rheumatic diseases and in developing computational approaches to study transcriptomic data in these disorders. 
-She has developed frameworks for integrating large compendia of bulk transcriptomic data and will be responsible for building the compendium of bulk rheumatic disease data in Aim 2. 
+Jaclyn Taroni (jaclyn-taroni on GitHub) is a postdoctoral researcher in the Dr. Greene’s laboratory.
+Dr. Taroni has expertise in rheumatic diseases and in developing computational approaches to study transcriptomic data in these disorders.
+She has developed frameworks for integrating large compendia of bulk transcriptomic data and will be responsible for building the compendium of bulk rheumatic disease data in Aim 2.
 Dr. Taroni will evaluate the biological relevance of the low-dimensional representations of single-cell data learned by various methods in the context of rheumatic diseases.
 She will participate in experimental design, analysis, and manuscript preparation.
-* jaclyn-taroni on github
 
 ## Brief preliminary budget (Attached)
