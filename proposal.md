@@ -235,8 +235,11 @@ _6.0 Cal Months_.
 
 **Jaclyn Taroni, PhD (Postdoctoral Researcher).**
 _2.4 Cal Months_.
-    * Short bio.
-    * jaclyn-taroni on github.
-    * Evaluation for bio relevance to rheumatic disease bulk dataset compendia
+Jaclyn Taroni is a postdoctoral researcher in the Dr. Greene’s laboratory. 
+Dr. Taroni has expertise in rheumatic diseases and in developing computational approaches to study transcriptomic data in these disorders. 
+She has developed frameworks for integrating large compendia of bulk transcriptomic data and will be responsible for building the compendium of bulk rheumatic disease data in Aim 2. 
+Dr. Taroni will evaluate the biological relevance of the low-dimensional representations of single-cell data learned by various methods in the context of rheumatic diseases.
+She will participate in experimental design, analysis, and manuscript preparation.
+* jaclyn-taroni on github
 
 ## Brief preliminary budget (Attached)
