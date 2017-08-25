@@ -2,6 +2,8 @@
 
 ## Primary Focus Area
 
+Computational Biology
+
 ## Project Summary
 
 ## Keywords
