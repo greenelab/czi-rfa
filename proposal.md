@@ -130,24 +130,23 @@ Models will be disseminated via periodic release on Zenodo or a similar platform
 
 #### Evaluate the extent to which low-dimensional representations enable latent space arithmetic in the HCA.
 
-Certain classes of generative deep neural network models, including VAEs and GANs, add a distribution matching constraint that has been shown to imbue intuitive mathematical features to the learned latent features [@arxiv:1312.6114 @arxiv:1406.2661].
+Certain classes of generative deep neural network models, including VAEs and GANs have been shown to imbue intuitive mathematical features to the learned latent features [@arxiv:1312.6114 @arxiv:1406.2661].
 For instance, a GAN learned latent features that could be manipulated with arithmetic: Subtracting out the essence of a smile from a woman and adding it to a neutral man resulted in an image vector of a smiling man [@arxiv:1511.06434].
-We will evaluate the extent to which this is true for low-dimensional representations of the HCA's single-cell transcriptomes using benchmark data that contains parallel perturbations, which allows us to hold out one or more perturbations for one or more cell types to evaluate each method.
-We describe two experiments using data proposed by Arjun Raj's group, but any HCA benchmark datasets with similar properties will be suitable.
-We are happy to expand our evaluation to additional suitable datasets, and we are happy to evaluate low-dimensional models produced by other groups.
+We will evaluate the extent to which this is true for low-dimensional representations of the HCA's single-cell transcriptomes.
+We describe two experiments using data proposed by Arjun Raj's group (Collaborative Network), but any HCA benchmark datasets with similar properties will be suitable.
 
 The Raj lab proposes to generate data related to cardiomyocte differentiation from fibroblasts.
 The driving transcription factors for this process have been identified [@doi:10.1016/j.cell.2010.07.002].
-The latent space vector between these two cell types should capture the key transcription factor networks (Gata4, Mef2c, and Tbx5).
+A latent space vector between these two cell types should capture the key transcription factor networks (Gata4, Mef2c, and Tbx5).
 To calculate this vector we will subtract the latent space projections of human fibroblasts from cardiomyocytes.
 We will compare the gene composition of this differentiation vector to target calls from cistrome [@doi:10.1093/nar/gkw983], which are available for each of these TFs.
 
-Latent space arithmetic can also be used to generate new hypothetical data, and we will test the extent to which these models can predict the results of perturbations.
-Arjun Raj's lab is generating data with homogenized cell-types under various perturbations.
+Latent space arithmetic can also generate new hypothetical data.
+We will test the extent to which these models can predict the results of perturbations using perturbation data that Arjun Raj's lab is generating with homogenized cell types.
 For each perturbation, we will hold out one or more cell types and map the rest into the latent space.
-Subtracting the latent space vector of included cell types from the same cells after perturbation will produce a perturbation vector.
-We will add the perturbation vector to one of the cell types for which the perturbation was withheld to generate synthetic data, and we will compare the results to the actual held out data to determine the error of the prediction.
-Comparing all results for low-dimensional methods to the baseline method of performing the same subtraction operations in raw gene expression space will allow us to determine the extent to which these models capture perturbation information.
+Subtracting the latent space vector of included cell types from those after perturbation will produce a perturbation vector.
+We will add the perturbation vector to one of the cell types for which the perturbation was withheld to generate synthetic data, and we will compare the results to the actual held out data to determine the prediction error.
+Comparing all results for low-dimensional methods to the baseline method of analogous transformations in raw gene expression space allow us to determine the extent to which these approaches predict perturbations.
 
 #### Rheumatic Disease Evaluation
 
