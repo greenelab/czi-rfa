@@ -17,7 +17,6 @@ For example, FaceApp [@url:https://www.faceapp.com] can modify a picture of an i
 The overall objective of this proposal is to determine how unsupervised deep neural network models can best be trained on single cell expression data from the HCA and the extent to which such models define biological latent spaces that capture disease states and targeted perturbations.
 The rationale is that latent space arithmetic for single cell transcriptomes would enable researchers to use predict how the expression of every gene would change in each HCA-identified cell type in numerous conditions including after drug treatment, in the context of a specific genetic variant, with a specific disease, or a combination of these and other factors.
 
-
 ## Keywords
 
 gene expression, deep learning, unsupervised, latent space, hypothesis generating
