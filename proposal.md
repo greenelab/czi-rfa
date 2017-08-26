@@ -94,7 +94,7 @@ We will also develop data augmentation for single cell RNA-seq data, as no such 
 To understand data augmentation, imagine scanned pathology slides.
 Each slide may be prepared and scanned with a subtly different orientation or magnification.
 A deep learning method may simply identify such technical differences, or there may be too few slides to train a good model.
-Applying apply arbitrary rotations, zooms, and other irrelevant transformations increases the effective amount of training data and reduces the model's propensity to learn technical noise.
+Applying apply arbitrary rotations, zooms, and other irrelevant transformations increases the effective amount of training data and reduces the model's propensity to learn such noise.
 
 We expect that fast abundance estimates for RNA-seq [@doi:10.1038/nmeth.4197 @10.1038/nbt.3519] will make a data augmentation approach feasible for transcriptomes.
 Multiple resamples or subsamples of reads during transcript abundance estimation can help to capture the uncertainty in the data, akin to arbitrary rotations.
@@ -107,10 +107,9 @@ We will evaluate resulting models for their applicability to rheumatic disease a
 #### Aim 2: Generate a benchmark dataset of harmonized public data to evaluate the extent to which HCA cell types capture disease states for multiple rheumatic diseases.
 
 The HCA's partnership with the Immunological Genome Project (immgenH) will provide single-cell gene expression-based immunocyte phenotyping at an unprecedented resolution.
-Ultimately, we expect that HCA-identified cell populations will translate to an improved understanding of health and disease.
 A compendium comprised of bulk gene expression data from autoimmune/rheumatic diseases is exceptionally well-suited for the biologically-motivated evaluation (e.g., benchmarking) of these immunocyte data.
-The _objective of this aim_ is to build such a compendium and to evaluate methods, including VAEs and other methods developed through this initiative, for defining cell-type-specific expression signatures from the HCA's single-cell datasets by measuring their performance in the context of decomposing bulk, whole-tissue autoimmune/rheumatic disease data.
-We will develop both real and simulated benchmark datasets to evaluate the quality of the cell-type-specific signatures (and by extension the methods) for deconvolution and the identification of correct cell-type proportions and phenotypes.
+The _objective of this aim_ is to build and share real and simulated benchmark datasets to evaluate the quality of the cell-type-specific signatures.
+This will allow CZI to evaluate techniques, including VAEs and other methods, for defining cell-type-specific expression signatures from the HCA's single-cell datasets by measuring their ability to decompose bulk, whole-tissue autoimmune/rheumatic disease data.
 
 We will generate simulated bulk datasets drawn from purified cell lineages by combining the purified cell expression data at different proportions.
 We will also build a multi-tissue autoimmune/rheumatic disease compendium from existing public data of bulk tissues.
