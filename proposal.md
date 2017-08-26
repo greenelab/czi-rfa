@@ -43,7 +43,7 @@ Our collaborative network includes a number of groups responding to this RFA. Th
 Certain types of deep unsupervised neural networks can generate hypothetical data by learning and decoding a lower dimensional latent space.
 An ideal latent space enables arithmetic operations that use data to produce realistic output for novel transformations.
 Models of image data produce realistic looking fake images [@doi:1502.04623] and capture protein localization within the cell-cycle to enable interpolation [@doi:1708.04692].
-FaceApp, which modifies a picture of an individual to produce an image of the subject at an older age, with a different expression, or of a different gender [@url:https://www.faceapp.com] is an accessible example of latent space transformations.
+FaceApp [@url:https://www.faceapp.com], which modifies a picture of an individual to produce an image of the subject at an older age, with a different expression, or of a different gender is an accessible example of latent space transformations.
 
 Our _overall objective_ is to determine how unsupervised deep neural network models can best be trained on single cell expression data from the Human Cell Atlas (HCA) and the extent to which such models define biological latent spaces that capture disease states and targeted perturbations.
 The _rationale_ is that latent space arithmetic for genomic data would enable researchers to use predict how the expression of every gene would change in each HCA-identified cell type after drug treatment, in the context of a specific genetic variant, with a specific disease, or a combination of these and other factors.
