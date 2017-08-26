@@ -6,6 +6,18 @@ Computational Biology
 
 ## Project Summary
 
+The Human Cell Atlas (HCA) aims to provide a comprehensive map of all types of human cells.
+Connecting that map to disease states, which will be key to the CZI's mission of curing or managing all diseases in the next eighty years, will require us to see how these cell types change during aging, during disease processes, or in the presence of drugs.
+Ideally, we'd be able to apply a transformation to the HCA's reference map to predict and study these states.
+
+Certain types of deep unsupervised neural networks can generate hypothetical data by learning and decoding a lower dimensional latent space.
+An ideal latent space enables arithmetic operations that use data to produce realistic output for novel transformations.
+For example, FaceApp [@url:https://www.faceapp.com] can modify a picture of an individual to produce an image of the subject at an older age, with a different expression, or of a different gender.
+
+The overall objective of this proposal is to determine how unsupervised deep neural network models can best be trained on single cell expression data from the HCA and the extent to which such models define biological latent spaces that capture disease states and targeted perturbations.
+The rationale is that latent space arithmetic for genomic data would enable researchers to use predict how the expression of every gene would change in each HCA-identified cell type in numerous conditions including after drug treatment, in the context of a specific genetic variant, with a specific disease, or a combination of these and other factors.
+
+
 ## Keywords
 
 gene expression, deep learning, unsupervised, latent space, hypothesis generating
