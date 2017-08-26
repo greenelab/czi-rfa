@@ -71,8 +71,6 @@ The _rationale_ is that latent space arithmetic for genomic data would enable re
 
 ### Prior Contributions / Preliminary Results
 
-, including Restricted Boltzmann Machines (RBMs) [@url:http://dl.acm.org/citation.cfm?id=104290], Variational Autoencoders (VAEs) [@arxiv:1312.6114], and Generative Adversarial Networks (GANs) [@arxiv:1406.2661],
-
 We have developed a number of methods to integrate transcriptomic data compendia with neural networks [@doi:10.1128/mSystems.00025-15 @doi:10.1016/j.cels.2017.06.003 @doi:10.1101/156620].
 We've recently moved to generative models, which in the field of image analysis define meaningful latent spaces.
 We found that GANs, with some additional steps, can generate realistic shareable samples from individual clinical trials records under a differential privacy framework [@doi:10.1101/159756].
@@ -84,7 +82,7 @@ We also bring expertise automating reproducible workflows to the HCA community [
 
 #### Aim 1: Develop proof-of-concept unsupervised deep learning methods for single cell transcriptomic data from the HCA.
 
-The _objective of this aim_ is to implement and test approaches to adapt deep generative models, such as VAEs or GANs, to HCA-produced single cell gene expression data.
+The _objective of this aim_ is to implement and test approaches to adapt deep generative models, such as Variational Autoencoders (VAEs) [@arxiv:1312.6114] and Generative Adversarial Networks (GANs) [@arxiv:1406.2661], to HCA-produced single cell gene expression data.
 
 Single cell data pose unique challenges, as well as opportunities, for deep neural network algorithms.
 Though each estimate of transcript abundance in each cell may include substantially more error than bulk samples, there are also many observations as numerous cells are often assayed.
