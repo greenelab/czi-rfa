@@ -23,7 +23,7 @@ gene expression, deep learning, unsupervised, latent space, hypothesis generatin
 Our collaborative network includes a number of groups responding to this RFA. This group of investigators came together around a set of responses to the RFA that were shared openly on GitHub as they were written. Selected interactions between groups center on topics such as:
 
 * _Deep learning_ methods are expected to be relevant to many proposals. For example, Arjun Raj proposes to apply these methods to analyze images of single cells. We recently completed a large GitHub-authored collaborative review to identify deep learning strategies that address biological problems. We look forward to discussing techniques with Arjun's group and others as they apply these methods.
-* _Augmented training_ is a technique used to analyze image data with deep learning. During training, arbitrary patches are selected and arbitrary rotations are applied to training data to avoid learning irrelevant patterns. We propose an innovative equivalent for single cell expression data by sampling reads. This requires fast expression quantification. We plan to work with Rob Patro, an expert in fast gene expression quantification, to implement data augmentation by very rapidly sampling single cell observations. This is similar to the sub-sampling proposed in Elana Fertig's group, and we will incorporate information about the sensitivity of algorithms to co-variates in sample distributions developed as part of her proposal. 
+* _Augmented training_ is a technique used to analyze image data with deep learning. During training, arbitrary patches are selected and arbitrary rotations are applied to training data to avoid learning irrelevant patterns. We propose an innovative equivalent for single cell expression data by sampling reads. This requires fast expression quantification. We plan to work with Rob Patro, an expert in fast gene expression quantification, to implement data augmentation by very rapidly sampling single cell observations. This is similar to the sub-sampling proposed in Elana Fertig's group, and we will incorporate information about the sensitivity of algorithms to co-variates in sample distributions developed as part of her proposal.
 * _Benchmark data_ need to be diverse and different data will be important for different evaluations. We will contribute a large compendium of harmonized bulk gene expression data from multiple rheumatic diseases. This, combined with HCA single cell assays, will help us to evaluate the extent to which bulk public data measuring disease states can be explained by HCA-identified cell types. Our analysis of latent spaces benefits from datasets that measure parallel perturbations across multiple cell types, like those proposed by Arjun Raj. Such data from the Raj lab and other groups will be needed to effectively evaluate unsupervised deep learning methods for single cell data.
 * _Model interpretation_ is a key factor for any unsupervised approach. Elana Fertig and Loyal Goff's applications describe methods for the interpretation of unsupervised models. We are excited to collaborate on methods and infrastructure for model interpretation. Members of the Fertig lab have requested features in other software that we have developed, which are now implemented. We look forward to continued interactions as a collaborative network.
 * _Interactive servers_ can empower bench scientists to direct the analysis of single-cell genomics data. Lana Garmire's group developed Granatum, an interactive graphic interface for single cell analysis and is responding to this analyses. We will provide source code for generating VAEs that can be incorporated into Granatum and Granatum-like systems.
@@ -40,35 +40,32 @@ Our collaborative network includes a number of groups responding to this RFA. Th
 
 ### Summary
 
-Certain types of deep unsupervised neural networks, including Restricted Boltzmann Machines (RBMs) [@url:http://dl.acm.org/citation.cfm?id=104290], Variational Autoencoders (VAEs) [@arxiv:1312.6114], and Generative Adversarial Networks (GANs) [@arxiv:1406.2661], can generate hypothetical data by learning and decoding a lower dimensional latent space.
-This latent space preserves non-linear distances between data points and represents features that drive variation in the input data.
-An ideal latent space enables arithmetic operations that use data to produce novel transformations.
-Models of image data, such as the "DRAW" network, produce realistic looking fake images through the learning of a lower dimensional representation of different pixel arrangements [@doi:1502.04623].
-GANs trained on fluorescent microscopy images of yeast cells enable interpolation within the learned latent space to model cell-cycle protein localization [@doi:1708.04692].
-A fun and intuitive example of this is FaceApp, which is capable of modifying a picture of an individual to produce an image of the subject at an older age, with a different expression, or of a different gender [@url:https://www.faceapp.com].
+Certain types of deep unsupervised neural networks can generate hypothetical data by learning and decoding a lower dimensional latent space.
+An ideal latent space enables arithmetic operations that use data to produce realistic output for novel transformations.
+Models of image data produce realistic looking fake images [@doi:1502.04623] and capture protein localization within the cell-cycle to enable interpolation [@doi:1708.04692].
+FaceApp, which modifies a picture of an individual to produce an image of the subject at an older age, with a different expression, or of a different gender [@url:https://www.faceapp.com] is an accessible example of latent space transformations.
 
-Generative deep neural network models that produce meaningful latent spaces can serve two purposes: (1) non-linear dimensionality reduction and (2) the ability to generate hypothetical data.
-Biologically relevant latent spaces provide an opportunity for hypothesis generation on a genome-wide scale.
-For example, we could imagine that we might predict how gene expression would change for each cell type measured in the human cell atlas with drug treatment, in the context of a specific genetic variant, with a specific disease, or as a combination of these and other factors.
-
-Our _overall objective_ is to determine whether or not unsupervised deep neural network models can be trained with single cell expression data and the extent to which such methods define biological latent spaces that capture disease states and other perturbations.
-The _rationale_ is that latent space arithmetic would enable researchers to use HCA data to generate hypothetical cells under simulated perturbation for rapid discovery-oriented analyses probing cell type, cellular differentiation, and other processes.
+Our _overall objective_ is to determine how unsupervised deep neural network models can best be trained on single cell expression data from the Human Cell Atlas (HCA) and the extent to which such models define biological latent spaces that capture disease states and targeted perturbations.
+The _rationale_ is that latent space arithmetic for genomic data would enable researchers to use predict how the expression of every gene would change in each HCA-identified cell type after drug treatment, in the context of a specific genetic variant, with a specific disease, or a combination of these and other factors.
 
 ### Aims
 
 **Aim 1: Develop proof-of-concept unsupervised deep learning methods for single cell transcriptomic data from the HCA.**
 
-> Supporting analytical methods and machine learning approaches to solving problems such as multimodal integration, inference of state transitions and developmental trajectories, and representation of spatial relationships at the cellular or molecular level
+> Supporting analytical methods and machine learning approaches for solving the inference of state transitions and developmental trajectories
 
 **Aim 2: Generate a benchmark dataset of harmonized public data to evaluate the extent to which HCA cell types capture disease states for multiple rheumatic diseases.**
 
-> Generating curated benchmark datasets from new or existing data for evaluating computational methods and designing future analysis competitions
+> Generating curated benchmark datasets from existing data for evaluating computational methods and designing future analysis competitions
 
 **Aim 3: Evaluate the extent to which models that create reduced representations enable latent space arithmetic in the HCA.**
 
-> Supporting analytical methods and machine learning approaches to solving problems such as multimodal integration, inference of state transitions and developmental trajectories, and representation of spatial relationships at the cellular or molecular level
+> Generating curated benchmark datasets from new data for evaluating computational methods and designing future analysis competitions
+> Supporting analytical methods and machine learning approaches for solving the inference of state transitions and developmental trajectories
 
 ### Prior Contributions / Preliminary Results
+
+, including Restricted Boltzmann Machines (RBMs) [@url:http://dl.acm.org/citation.cfm?id=104290], Variational Autoencoders (VAEs) [@arxiv:1312.6114], and Generative Adversarial Networks (GANs) [@arxiv:1406.2661],
 
 We have developed a number of methods to integrate transcriptomic data compendia with neural networks [@doi:10.1128/mSystems.00025-15 @doi:10.1016/j.cels.2017.06.003 @doi:10.1101/156620].
 We've recently moved to generative models, which in the field of image analysis define meaningful latent spaces.
