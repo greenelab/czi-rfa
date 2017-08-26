@@ -172,13 +172,8 @@ Real and simulated datasets will be disseminated as they are developed via perio
 
 ### Statement of commitment to share
 
-We look forward to sharing our proposals, methods, data, and code with other researchers funded by this RFA, with CZI, and with the broader research community.
-
-* We have shared our proposal under a CC-BY license as it was being written.
-* We will share our description of methods, written reports, figures, and other such outputs under a CC-BY license.
-* We will share source code for our software under the BSD 3-clause license.
-
-We would consider sharing any of these elements under more permissive licenses if requested by CZI.
+We commit to sharing proposals, methods, data, and code publicly under open licenses.
+We understand that our proposal will be shared if it is funded: in fact we [shared it publicly under a CC-BY license](https://github.com/greenelab/czi-rfa) as it was written.
 
 ## References (non-doi)
 1.  Smolensky, P. Information processing in dynamical systems: Foundations of harmony theory. In D. Rumelhart and J. McClelland
