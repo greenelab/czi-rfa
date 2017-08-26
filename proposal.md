@@ -10,7 +10,7 @@ The Human Cell Atlas (HCA) aims to provide a comprehensive map of all types of h
 Connecting that map to disease states, which will be key to the CZI's mission of curing or managing all diseases in the next eighty years, will require us to see how these cell types change during aging, during disease processes, or in the presence of drugs.
 Ideally, we'd be able to apply a transformation to the HCA's reference map to predict and study these states.
 
-Certain types of deep unsupervised neural networks can generate hypothetical data by learning and decoding a lower dimensional latent space.
+Certain types of deep neural networks can generate hypothetical data by learning and decoding a lower dimensional latent space.
 An ideal latent space enables arithmetic operations that use data to produce realistic output for novel transformations.
 For example, FaceApp [@url:https://www.faceapp.com] can modify a picture of an individual to produce an image of the subject at an older age, with a different expression, or of a different gender.
 
@@ -51,10 +51,10 @@ Our collaborative network came together around a set of responses to the RFA tha
 
 ### Summary
 
-Certain types of deep unsupervised neural networks can generate hypothetical data by learning and decoding a lower dimensional latent space.
-An ideal latent space enables arithmetic operations that use data to produce realistic output for novel transformations.
-Models of image data produce realistic looking fake images [@doi:1502.04623] and capture protein localization within the cell-cycle to enable interpolation [@doi:1708.04692].
-FaceApp [@url:https://www.faceapp.com], which modifies a picture of an individual to produce an image of the subject at an older age, with a different expression, or of a different gender is an accessible example of latent space transformations.
+Certain types of deep neural networks can generate hypothetical data by learning and decoding a lower dimensional latent space.
+An ideal latent space enables arithmetic operations that produce realistic output for novel transformations.
+Models of images can generate realistic looking fake images [@doi:1502.04623] or enable the interpolation of protein localizations through the cell-cycle [@doi:1708.04692].
+FaceApp [@url:https://www.faceapp.com] modifies a picture of an individual to produce an image of the subject at an older age, with a different expression, or of a different gender is an accessible example of latent space transformations.
 
 Our _overall objective_ is to determine how unsupervised deep neural network models can best be trained on single cell expression data from the Human Cell Atlas (HCA) and the extent to which such models define biological latent spaces that capture disease states and targeted perturbations.
 The _rationale_ is that latent space arithmetic for genomic data would enable researchers to use predict how the expression of every gene would change in each HCA-identified cell type after drug treatment, in the context of a specific genetic variant, with a specific disease, or a combination of these and other factors.
@@ -63,18 +63,15 @@ The _rationale_ is that latent space arithmetic for genomic data would enable re
 
 **Aim 1: Develop proof-of-concept unsupervised deep learning methods for single cell transcriptomic data from the HCA.**
 
-> Supporting analytical methods and machine learning approaches for solving the inference of state transitions and developmental trajectories
-
 **Aim 2: Generate a benchmark dataset of harmonized public data to evaluate the extent to which HCA cell types capture disease states for multiple rheumatic diseases.**
 
-> Generating curated benchmark datasets from existing data for evaluating computational methods and designing future analysis competitions
+Aim 1 develops machine learning approaches for solving the inference of state transitions and developmental trajectories, while Aim 2 results in curated benchmark datasets from existing data for evaluating computation methods and designing future assessments.
 
 ### Prior Contributions / Preliminary Results
 
-We have developed a number of methods to integrate transcriptomic data compendia with neural networks [@doi:10.1128/mSystems.00025-15 @doi:10.1016/j.cels.2017.06.003 @doi:10.1101/156620].
-We've recently moved to generative models, which in the field of image analysis define meaningful latent spaces.
-We found that GANs, with some additional steps, can generate realistic shareable samples from individual clinical trials records under a differential privacy framework [@doi:10.1101/159756].
-In recent work, we've constructed VAEs over bulk transcriptomic data with the goal of describing a biologically-relevant latent space [@doi:10.1101/174474].
+We have developed neural-network based methods for unsupervised transcriptomic data integration [@doi:10.1128/mSystems.00025-15 @doi:10.1016/j.cels.2017.06.003 @doi:10.1101/156620].
+We've recently moved to Generative Adversarial Networks (GANs) and Variational Autoencoders (VAEs) which have a track record of defining meaningful latent spaces with image data.
+We showed that GANs can be adapted to generate realistic shareable samples from individual clinical trials records under a differential privacy framework [@doi:10.1101/159756] and built VAEs over bulk transcriptomic data with the goal of describing a biologically-relevant latent space [@doi:10.1101/174474].
 In this work, we will apply these unsupervised deep learning methods to single cell transcriptomic data, while incorporating data augmentation approaches that are novel to genomics.
 We also bring expertise automating reproducible workflows to the HCA community [@doi:10.1038/nbt.3780].
 
@@ -82,13 +79,12 @@ We also bring expertise automating reproducible workflows to the HCA community [
 
 #### Aim 1: Develop proof-of-concept unsupervised deep learning methods for single cell transcriptomic data from the HCA.
 
-The _objective of this aim_ is to implement and test approaches to adapt deep generative models, such as Variational Autoencoders (VAEs) [@arxiv:1312.6114] and Generative Adversarial Networks (GANs) [@arxiv:1406.2661], to HCA-produced single cell gene expression data.
+The _objective of this aim_ is to implement and test approaches to build deep generative models, such as VAEs [@arxiv:1312.6114] and GANs [@arxiv:1406.2661], from the HCA's single cell RNA-seq data.
 
-Single cell data pose unique challenges, as well as opportunities, for deep neural network algorithms.
-Though each estimate of transcript abundance in each cell may include substantially more error than bulk samples, there are also many observations as numerous cells are often assayed.
-Also, the HCA project includes data from multiple cell types, so we expect substantial numbers of observations to be available.
-From our experience with generative deep neural networks [@doi:10.1101/159756], we have found that it can be difficult to predict precisely which advances will enable robust training in a specific context, particularly when the specific context has not been tackled before.
-We describe our standard approach here, as well as a couple selected techniques that we anticipate will be particularly helpful in this setting such as zero-inflated loss and data augmentation, but we expect to also employ other strategies where warranted.
+Single cell data pose unique opportunities, but also challenges, for deep neural network algorithms.
+The estimate of transcript abundance in each cell is generally subject to more error than bulk samples, but there are often many more cells assayed.
+The HCA is mapping numerous tissue types, so many single-cell transcriptomes will be available.
+In our experience with generative deep neural networks [@doi:10.1101/159756 @doi:10.1101/174474] it can be difficult to predict which advances will enable robust training in a new context.
 
 Our standard approach is to first perform an extensive grid search to identify VAE architectures and hyperparameters that are amenable to this context.
 We will evaluate multiple types of reconstruction loss during training, as Chris Probert noted on our proposal's GitHub repository [@url:https://github.com/greenelab/czi-rfa/issues/11] that numerous manuscripts demonstrated the advantages of zero-inflated loss in the setting of single cell sequencing data [@doi:10.1186/s13059-015-0805-z @arxiv:1610.05857 @doi:10.1186/s13059-017-1188-0].
