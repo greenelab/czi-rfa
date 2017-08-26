@@ -91,11 +91,10 @@ We will evaluate multiple types of reconstruction loss during training, as Chris
 These efforts will allow us to identify a subset of parameters and architectures that are worth exploring further in this context.
 
 We will also develop a data augmentation approach for training deep models on single cell RNA-seq data, as no data augmentation approaches for transcriptomic data have been published to date.
-These approaches are widely used in image analysis.
 To understand data augmentation, imagine pathology slides that have been scanned.
 Each slide may be prepared and scanned in a subtly different orientation or at somewhat different magnifications.
-A deep learning method may learn to identify these technical differences, or there may simply be too few slides to train a deep learning algorithm.
-Deep learning practitioners will apply arbitrary rotations, zooms, and other irrelevant transformations to image data during training in a process termed data augmentation.
+A deep learning method may simply identify these technical differences, or there may be too few slides to train a good model.
+Applying apply arbitrary rotations, zooms, and other irrelevant transformations increases the effective amount of training data and reduces the model's propensity to learn such noise.
 
 We expect that fast abundance estimates for RNA-seq [@doi:10.1038/nmeth.4197 @10.1038/nbt.3519] will make a data augmentation approach feasible for transcriptomes.
 Multiple resamples or subsamples of reads during transcript abundance estimation can help to capture the uncertainty in the data, akin to arbitrary rotations.
@@ -152,19 +151,18 @@ Comparing all results for low-dimensional methods to the baseline method of perf
 
 #### Rheumatic Disease Evaluation
 
-We will input signatures from these methods into existing techniques [@doi:10.1186/s13059-016-1070-5 @doi:10.1093/bioinformatics/btv015] that decompose bulk data with cell type signatures and evaluate performance (e.g., prediction of proportions) on the simulated data from Aim 2.
-By using comparing performance across multiple decomposition techniques we can measure each method's ability to define bulk-relevant signatures from single cell data in datasets with an available ground truth.
+We will input signatures from low-dimensional projections into existing techniques [@doi:10.1186/s13059-016-1070-5 @doi:10.1093/bioinformatics/btv015] that decompose bulk data with cell type signatures and evaluate concordance with ground truth on Aim 2's simulated dataset.
+Comparing performance across decomposition techniques allows us to measure each method's ability to define bulk-relevant signatures from single cell data.
 We will also use signatures to decompose the rheumatic disease compendium (Aim 2).
-This compendium includes drug studies of highly-targeted therapeutics (e.g., a monoclonal antibody to IFN-gamma [anti-IFNg] in the context of systemic lupus erythematosus [@doi:10.1002/art.39248]).
-This allows us to determine what cell-types change in proportion during the reduction of this cytokine or if the IFN-inducible expression is preferentially altered in one cell type.
-At this stage, we will use this type of analysis to identify cases where methods disagree.
-Disagreements that we identify can be directly probed in future experiments (beyond the one-year timeline) to produce periodic ground-truth benchmarks.
+This compendium includes studies of highly-targeted therapeutics (e.g., a monoclonal antibody to IFN-gamma in the context of systemic lupus erythematosus [@doi:10.1002/art.39248]).
+We will use low-dimensional representations to determine what cell-types change in proportion during the reduction of this cytokine or if the IFN-inducible expression is preferentially altered in one cell type.
+At this stage, we will use such analyses to identify cases where methods disagree, with the aim of selecting a set to directly probe in future experiments (beyond the one-year timeline) to produce periodic ground-truth benchmarks.
 Real and simulated datasets will be disseminated as they are developed via periodic release on Zenodo or a similar platform.
 
 ### Statement of commitment to share
 
 We commit to sharing proposals, methods, data, and code publicly under open licenses.
-We understand that our proposal will be shared if it is funded: in fact we [shared it publicly under a CC-BY license](https://github.com/greenelab/czi-rfa) as it was written.
+We understand that our proposal will be shared if it is funded: we [shared it publicly under a CC-BY license](https://github.com/greenelab/czi-rfa) as it was written.
 
 ## References (non-doi)
 1.  Smolensky, P. Information processing in dynamical systems: Foundations of harmony theory. In D. Rumelhart and J. McClelland
