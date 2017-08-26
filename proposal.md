@@ -71,7 +71,7 @@ Aim 1 develops machine learning approaches for solving the inference of state tr
 
 We have developed neural-network based methods for unsupervised transcriptomic data integration [@doi:10.1128/mSystems.00025-15 @doi:10.1016/j.cels.2017.06.003 @doi:10.1101/156620].
 We've recently moved to Generative Adversarial Networks (GANs) and Variational Autoencoders (VAEs) which have a track record of defining meaningful latent spaces with image data.
-We showed that GANs can be adapted to generate realistic shareable samples from individual clinical trials records under a differential privacy framework [@doi:10.1101/159756] and built VAEs over bulk transcriptomic data with the goal of describing a biologically-relevant latent space [@doi:10.1101/174474].
+We showed that GANs can be adapted to generate realistic individuals under a differential privacy framework [@doi:10.1101/159756] and built VAEs over bulk transcriptomic data with the goal of describing a biologically-relevant latent space [@doi:10.1101/174474].
 In this work, we will apply these unsupervised deep learning methods to single cell transcriptomic data, while incorporating data augmentation approaches that are novel to genomics.
 We also bring expertise automating reproducible workflows to the HCA community [@doi:10.1038/nbt.3780].
 
