@@ -86,15 +86,15 @@ The estimate of transcript abundance in each cell is generally subject to more e
 The HCA is mapping numerous tissue types, so many single-cell transcriptomes will be available.
 In our experience with generative deep neural networks [@doi:10.1101/159756 @doi:10.1101/174474] it can be difficult to predict which advances will enable robust training in a new context.
 
-We will first perform an extensive grid search over VAE architectures and hyperparameters to identify suitable options.
+We will perform a grid search over VAE architectures and hyperparameters to identify suitable options.
 We will evaluate multiple types of reconstruction loss during training, as Chris Probert noted on our proposal's GitHub repository [@url:https://github.com/greenelab/czi-rfa/issues/11] that numerous manuscripts demonstrated the advantages of zero-inflated loss in the setting of single cell sequencing data [@doi:10.1186/s13059-015-0805-z @arxiv:1610.05857 @doi:10.1186/s13059-017-1188-0].
-These efforts will allow us to identify a subset of parameters and architectures that are worth exploring further in this context.
+This will identify a subset of parameters and architectures that are worth exploring further in this context.
 
-We will also develop a data augmentation approach for training deep models on single cell RNA-seq data, as no data augmentation approaches for transcriptomic data have been published to date.
-To understand data augmentation, imagine pathology slides that have been scanned.
-Each slide may be prepared and scanned in a subtly different orientation or at somewhat different magnifications.
-A deep learning method may simply identify these technical differences, or there may be too few slides to train a good model.
-Applying apply arbitrary rotations, zooms, and other irrelevant transformations increases the effective amount of training data and reduces the model's propensity to learn such noise.
+We will also develop data augmentation for single cell RNA-seq data, as no such approaches have been published to date for transcriptomes.
+To understand data augmentation, imagine scanned pathology slides.
+Each slide may be prepared and scanned with a subtly different orientation or magnification.
+A deep learning method may simply identify such technical differences, or there may be too few slides to train a good model.
+Applying apply arbitrary rotations, zooms, and other irrelevant transformations increases the effective amount of training data and reduces the model's propensity to learn technical noise.
 
 We expect that fast abundance estimates for RNA-seq [@doi:10.1038/nmeth.4197 @10.1038/nbt.3519] will make a data augmentation approach feasible for transcriptomes.
 Multiple resamples or subsamples of reads during transcript abundance estimation can help to capture the uncertainty in the data, akin to arbitrary rotations.
