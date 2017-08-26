@@ -86,27 +86,24 @@ The estimate of transcript abundance in each cell is generally subject to more e
 The HCA is mapping numerous tissue types, so many single-cell transcriptomes will be available.
 In our experience with generative deep neural networks [@doi:10.1101/159756 @doi:10.1101/174474] it can be difficult to predict which advances will enable robust training in a new context.
 
-Our standard approach is to first perform an extensive grid search to identify VAE architectures and hyperparameters that are amenable to this context.
+We will first perform an extensive grid search over VAE architectures and hyperparameters to identify suitable options.
 We will evaluate multiple types of reconstruction loss during training, as Chris Probert noted on our proposal's GitHub repository [@url:https://github.com/greenelab/czi-rfa/issues/11] that numerous manuscripts demonstrated the advantages of zero-inflated loss in the setting of single cell sequencing data [@doi:10.1186/s13059-015-0805-z @arxiv:1610.05857 @doi:10.1186/s13059-017-1188-0].
-These efforts will allow us to identify a subset of parameter combinations that are worth exploring with new approaches designed specifically for this type of genomic data.
+These efforts will allow us to identify a subset of parameters and architectures that are worth exploring further in this context.
 
 We will also develop a data augmentation approach for training deep models on single cell RNA-seq data, as no data augmentation approaches for transcriptomic data have been published to date.
-These approaches are widely used in image analysis, where the goal is to distinguish relevant from irrelevant features in an image corpus.
+These approaches are widely used in image analysis.
 To understand data augmentation, imagine pathology slides that have been scanned.
-Each slide may be prepared and scanned in a subtly different orientation or at somewhat different magnifications depending on who generated the data.
-A deep learning method may learn to identify these subtle differences, which is undesirable, or there may simply be too few slides to train a deep learning algorithm.
-To address these challenges, deep learning practitioners can apply arbitrary rotations, zooms, and other irrelevant transformations to image data during training.
-This process is called data augmentation.
+Each slide may be prepared and scanned in a subtly different orientation or at somewhat different magnifications.
+A deep learning method may learn to identify these technical differences, or there may simply be too few slides to train a deep learning algorithm.
+Deep learning practitioners will apply arbitrary rotations, zooms, and other irrelevant transformations to image data during training in a process termed data augmentation.
 
-We expect that very fast abundance estimates from RNA-seq data [@doi:10.1038/nmeth.4197 @10.1038/nbt.3519] will make a data augmentation approach feasible in this domain as well.
-Resampling reads to generate abundance estimates can help to capture the uncertainty in the data, akin to arbitrary rotations.
-Subsampling reads to generate abundance estimates can help to capture changes related to sequencing depth but unrelated to the biology, akin to arbitrary zooms.
-Therefore, we plan to collaborate with Rob Patro's laboratory via our collaborative network to implement approaches including but not limited to rapid subsampling and bootstrapping to generate augmented training data.
+We expect that fast abundance estimates for RNA-seq [@doi:10.1038/nmeth.4197 @10.1038/nbt.3519] will make a data augmentation approach feasible for transcriptomes.
+Multiple resamples or subsamples of reads during transcript abundance estimation can help to capture the uncertainty in the data, akin to arbitrary rotations.
+Therefore, we plan to collaborate with Rob Patro's laboratory (Collaborative Network) to implement these and related approaches.
 We posit that genomic data augmentation will improve latent feature generalization by separating biological from technical features and increasing the effective sample size during training.
 
-We will select high-quality models by choosing those that minimize both reconstruction loss and a KL divergence term which constrains the features to a Gaussian distribution [@arxiv:1312.6114].
-We will provide a source code repository with this implementation, as well as a summary of our findings, and we may produce a manuscript on the topic.
-Resulting models that exhibit desirable properties will be evaluated in the context of the rheumatic disease compendium (Aim 2) as well as their suitability for latent space arithmetic (see: Evaluation).
+We will select high-quality models by choosing those that minimize both reconstruction loss and KL divergence [@arxiv:1312.6114].
+We will evaluate resulting models for their applicability to rheumatic disease and their suitability for latent space arithmetic (see: Evaluation).
 
 #### Aim 2: Generate a benchmark dataset of harmonized public data to evaluate the extent to which HCA cell types capture disease states for multiple rheumatic diseases.
 
@@ -123,13 +120,13 @@ This compendium includes samples from patients with systemic lupus erythematosus
 This compendium will have desirable properties for evaluating single-cell data-derived signatures, as it will allow us to evaluate cell type proportions and phenotypes based on a body of previous literature.
 For instance, we expect to detect higher proportions of activated macrophages in lupus nephritis samples as compared to controls [@doi:10.4049/jimmunol.1103031].
 
-Importantly, a bulk compendium comprised of public data from a disease context will enable HCA participants (methods developers, RNA-seq based assay developers, and others) to directly evaluate approaches in the context where we expect their most immediate impact: application to existing datasets to explain disease-relevant phenomena via a single-cell perspective.
+We will produce bulk compendia (simulated and real data) that will enable HCA participants (methods developers, RNA-seq assay developers) to directly compare approaches where we expect their most immediate translational impact: application to existing datasets to explain disease-relevant phenomena via a single-cell perspective.
 
 ### Proposal for evaluation and dissemination.
 
 We will apply methods that produce low-dimensional representations including VAEs (Aim 1) and other methods to HCA-produced single cell transcriptomes.
 These low-dimensional representations will be used in evaluations to test latent space arithmetic and relevance to disease.
-Source code that reproducibly generates these models will be released via GitHub as it is developed.
+Source code that reproducibly generates these models will be released via GitHub as it is developed, and we may produce a manuscript on the topic.
 Models will be disseminated via periodic release on Zenodo or a similar platform.
 
 #### Evaluate the extent to which low-dimensional representations enable latent space arithmetic in the HCA.
