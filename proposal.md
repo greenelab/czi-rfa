@@ -53,7 +53,7 @@ Our collaborative network came together around a set of responses to the RFA tha
 
 Certain deep neural networks can generate hypothetical data by learning and decoding a lower dimensional latent space.
 This latent space enables arithmetic operations that produce realistic output for novel transformations.
-This allows users to generate hypothetical images [@doi:1502.04623] and to interpolate protein localizations through the cell-cycle [@doi:1708.04692].
+This allows users to generate hypothetical images [@arxiv:1502.04623] and to interpolate protein localizations through the cell-cycle [@arxiv:1708.04692].
 An accessible example of latent space transformations comes from FaceApp [@url:https://www.faceapp.com], which modifies a picture of an individual to produce an image of the subject at an older age, with a different expression, or of a different genders.
 
 Our _overall objective_ is to determine how unsupervised deep neural network models can best be trained on single cell expression data from the Human Cell Atlas (HCA) and the extent to which such models define biological latent spaces that capture disease states and targeted perturbations.
@@ -63,7 +63,7 @@ The _rationale_ is that latent space arithmetic for genomic data would enable re
 
 **Aim 1: Develop proof-of-concept unsupervised deep learning methods for single cell transcriptomic data from the HCA.**
 
-**Aim 2: Generate a benchmark dataset of harmonized public data to evaluate the extent to which HCA cell types capture disease states for multiple rheumatic diseases.**
+**Aim 2: Generate a benchmark dataset of harmonized public data to evaluate the extent to which HCA cell types capture rheumatic disease biology.**
 
 This proposal addresses two RFA points: Aim 1 develops machine learning approaches for solving the inference of state transitions and developmental trajectories, and Aim 2 provides curated benchmark datasets from existing data for evaluating computational methods and designing future assessments.
 
@@ -71,7 +71,7 @@ This proposal addresses two RFA points: Aim 1 develops machine learning approach
 
 We previously developed neural-network based methods for unsupervised integration of transcriptomic data [@doi:10.1128/mSystems.00025-15 @doi:10.1016/j.cels.2017.06.003 @doi:10.1101/156620].
 We now build to Generative Adversarial Networks (GANs) and Variational Autoencoders (VAEs) which have a track record of defining meaningful latent spaces for images.
-We showed that GANs can be adapted to generate realistic individuals under a differential privacy framework [@doi:10.1101/159756] and built VAEs over bulk transcriptomic data with the goal of describing a biologically-relevant latent space [@doi:10.1101/174474].
+We adapted GANs to generate realistic individuals under a differential privacy framework [@doi:10.1101/159756] and built VAEs over bulk transcriptomic data with the goal of describing a biologically-relevant latent space [@doi:10.1101/174474].
 Here, we will apply these unsupervised deep learning methods to single cell transcriptomic data and incorporate novel data augmentation approaches for genomics.
 We also bring workflow automation experience to the HCA community [@doi:10.1038/nbt.3780].
 
@@ -104,7 +104,7 @@ We posit that genomic data augmentation will improve latent feature generalizati
 We will select high-quality models by choosing those that minimize both reconstruction loss and KL divergence [@arxiv:1312.6114].
 We will evaluate resulting models for their applicability to rheumatic disease and their suitability for latent space arithmetic (see: Evaluation).
 
-#### Aim 2: Generate a benchmark dataset of harmonized public data to evaluate the extent to which HCA cell types capture disease states for multiple rheumatic diseases.
+#### Aim 2: Generate a benchmark dataset of harmonized public data to evaluate the extent to which HCA cell types capture rheumatic disease biology.
 
 The HCA's partnership with the Immunological Genome Project (immgenH) will provide single-cell gene expression-based immunocyte phenotyping at an unprecedented resolution.
 A compendium comprised of bulk gene expression data from autoimmune/rheumatic diseases is exceptionally well-suited to evaluating the disease relevance of these immunocyte data.
