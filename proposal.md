@@ -94,7 +94,7 @@ We will also develop data augmentation for single cell RNA-seq data, as no such 
 To understand data augmentation, imagine scanned pathology slides.
 Each slide may be prepared and scanned with a subtly different orientation or magnification.
 A deep learning method may identify these measurement differences, or there may be too few slides to train a good model.
-Applying apply arbitrary rotations, zooms, and other irrelevant transformations increases the effective amount of training data and reduces the model's propensity to learn such noise.
+Applying arbitrary rotations, zooms, and other irrelevant transformations increases the effective amount of training data and reduces the model's propensity to learn such noise.
 
 We plan to use fast abundance estimates for RNA-seq [@doi:10.1038/nmeth.4197 @10.1038/nbt.3519] to perform data augmentation for transcriptomes.
 Multiple resamples or subsamples of reads during transcript abundance estimation can capture uncertainty in the data, akin to arbitrary rotations.
