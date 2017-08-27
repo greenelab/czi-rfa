@@ -51,13 +51,13 @@ Our collaborative network came together around a set of responses to the RFA tha
 
 ### Summary
 
-Certain types of deep neural networks can generate hypothetical data by learning and decoding a lower dimensional latent space.
-An ideal latent space enables arithmetic operations that produce realistic output for novel transformations.
-Models of images can generate realistic looking fake images [@doi:1502.04623] or enable the interpolation of protein localizations through the cell-cycle [@doi:1708.04692].
-FaceApp [@url:https://www.faceapp.com] modifies a picture of an individual to produce an image of the subject at an older age, with a different expression, or of a different gender is an accessible example of latent space transformations.
+Certain deep neural networks can generate hypothetical data by learning and decoding a lower dimensional latent space.
+This latent space enables arithmetic operations that produce realistic output for novel transformations.
+This allows users to generate hypothetical images [@doi:1502.04623] and to interpolate protein localizations through the cell-cycle [@doi:1708.04692].
+An accessible example of latent space transformations comes from FaceApp [@url:https://www.faceapp.com], which modifies a picture of an individual to produce an image of the subject at an older age, with a different expression, or of a different genders.
 
 Our _overall objective_ is to determine how unsupervised deep neural network models can best be trained on single cell expression data from the Human Cell Atlas (HCA) and the extent to which such models define biological latent spaces that capture disease states and targeted perturbations.
-The _rationale_ is that latent space arithmetic for genomic data would enable researchers to use predict how the expression of every gene would change in each HCA-identified cell type after drug treatment, in the context of a specific genetic variant, with a specific disease, or a combination of these and other factors.
+The _rationale_ is that latent space arithmetic for genomic data would enable researchers to predict how the expression of every gene would change in each HCA-identified cell type after drug treatment, in the context of a specific genetic variant, with a specific disease, or a combination of these and other factors.
 
 ### Aims
 
@@ -65,15 +65,15 @@ The _rationale_ is that latent space arithmetic for genomic data would enable re
 
 **Aim 2: Generate a benchmark dataset of harmonized public data to evaluate the extent to which HCA cell types capture disease states for multiple rheumatic diseases.**
 
-Aim 1 develops machine learning approaches for solving the inference of state transitions and developmental trajectories, while Aim 2 results in curated benchmark datasets from existing data for evaluating computation methods and designing future assessments.
+This proposal addresses two RFA points: Aim 1 develops machine learning approaches for solving the inference of state transitions and developmental trajectories, and Aim 2 provides curated benchmark datasets from existing data for evaluating computational methods and designing future assessments.
 
 ### Prior Contributions / Preliminary Results
 
-We have developed neural-network based methods for unsupervised transcriptomic data integration [@doi:10.1128/mSystems.00025-15 @doi:10.1016/j.cels.2017.06.003 @doi:10.1101/156620].
-We've recently moved to Generative Adversarial Networks (GANs) and Variational Autoencoders (VAEs) which have a track record of defining meaningful latent spaces with image data.
+We previously developed neural-network based methods for unsupervised integration of transcriptomic data [@doi:10.1128/mSystems.00025-15 @doi:10.1016/j.cels.2017.06.003 @doi:10.1101/156620].
+We now build to Generative Adversarial Networks (GANs) and Variational Autoencoders (VAEs) which have a track record of defining meaningful latent spaces for images.
 We showed that GANs can be adapted to generate realistic individuals under a differential privacy framework [@doi:10.1101/159756] and built VAEs over bulk transcriptomic data with the goal of describing a biologically-relevant latent space [@doi:10.1101/174474].
-In this work, we will apply these unsupervised deep learning methods to single cell transcriptomic data, while incorporating data augmentation approaches that are novel to genomics.
-We also bring expertise automating reproducible workflows to the HCA community [@doi:10.1038/nbt.3780].
+Here, we will apply these unsupervised deep learning methods to single cell transcriptomic data and incorporate novel data augmentation approaches for genomics.
+We also bring workflow automation experience to the HCA community [@doi:10.1038/nbt.3780].
 
 ### Proposed work and deliverables
 
@@ -82,22 +82,22 @@ We also bring expertise automating reproducible workflows to the HCA community [
 The _objective of this aim_ is to implement and test approaches to build deep generative models, such as VAEs [@arxiv:1312.6114] and GANs [@arxiv:1406.2661], from the HCA's single cell RNA-seq data.
 
 Single cell data pose unique opportunities, but also challenges, for deep neural network algorithms.
-The estimate of transcript abundance in each cell is generally subject to more error than bulk samples, but there are often many more cells assayed.
-The HCA is mapping numerous tissue types, so many single-cell transcriptomes will be available.
-In our experience with generative deep neural networks [@doi:10.1101/159756 @doi:10.1101/174474] it can be difficult to predict which advances will enable robust training in a new context.
+Many cells are often assayed, and many observations are needed to use deep learning effectively.
+However, transcript abundance estimates for each cell are generally subject to more error than bulk samples.
 
+In our experience with generative deep learning [@doi:10.1101/159756 @doi:10.1101/174474] it can be difficult to predict optimal parameters in advance.
 We will perform a grid search over VAE architectures and hyperparameters to identify suitable options.
-We will evaluate multiple types of reconstruction loss during training, as Chris Probert noted on our proposal's GitHub repository [@url:https://github.com/greenelab/czi-rfa/issues/11] that numerous manuscripts demonstrated the advantages of zero-inflated loss in the setting of single cell sequencing data [@doi:10.1186/s13059-015-0805-z @arxiv:1610.05857 @doi:10.1186/s13059-017-1188-0].
-This will identify a subset of parameters and architectures that are worth exploring further in this context.
+We will evaluate zero-inflated loss among more traditional loss functions, as Chris Probert noted potential benefits on our proposal's GitHub repository [@url:https://github.com/greenelab/czi-rfa/issues/11] @doi:10.1186/s13059-015-0805-z @arxiv:1610.05857 @doi:10.1186/s13059-017-1188-0].
+This process will identify a subset of parameters and architectures that are worth exploring further for single cells.
 
-We will also develop data augmentation for single cell RNA-seq data, as no such approaches have been published to date for transcriptomes.
+We will also develop data augmentation for single cell RNA-seq data, as no such approaches exist yet for transcriptomes.
 To understand data augmentation, imagine scanned pathology slides.
 Each slide may be prepared and scanned with a subtly different orientation or magnification.
-A deep learning method may simply identify such technical differences, or there may be too few slides to train a good model.
+A deep learning method may identify these measurement differences, or there may be too few slides to train a good model.
 Applying apply arbitrary rotations, zooms, and other irrelevant transformations increases the effective amount of training data and reduces the model's propensity to learn such noise.
 
-We expect that fast abundance estimates for RNA-seq [@doi:10.1038/nmeth.4197 @10.1038/nbt.3519] will make a data augmentation approach feasible for transcriptomes.
-Multiple resamples or subsamples of reads during transcript abundance estimation can help to capture the uncertainty in the data, akin to arbitrary rotations.
+We plan to use fast abundance estimates for RNA-seq [@doi:10.1038/nmeth.4197 @10.1038/nbt.3519] to perform data augmentation for transcriptomes.
+Multiple resamples or subsamples of reads during transcript abundance estimation can capture uncertainty in the data, akin to arbitrary rotations.
 Therefore, we plan to collaborate with Rob Patro's laboratory (Collaborative Network) to implement these and related approaches.
 We posit that genomic data augmentation will improve latent feature generalization by separating biological from technical features and increasing the effective sample size during training.
 
@@ -107,25 +107,25 @@ We will evaluate resulting models for their applicability to rheumatic disease a
 #### Aim 2: Generate a benchmark dataset of harmonized public data to evaluate the extent to which HCA cell types capture disease states for multiple rheumatic diseases.
 
 The HCA's partnership with the Immunological Genome Project (immgenH) will provide single-cell gene expression-based immunocyte phenotyping at an unprecedented resolution.
-A compendium comprised of bulk gene expression data from autoimmune/rheumatic diseases is exceptionally well-suited for the biologically-motivated evaluation (e.g., benchmarking) of these immunocyte data.
+A compendium comprised of bulk gene expression data from autoimmune/rheumatic diseases is exceptionally well-suited to evaluating the disease relevance of these immunocyte data.
 The _objective of this aim_ is to build and share real and simulated benchmark datasets to evaluate the quality of the cell-type-specific signatures.
 This will allow CZI to evaluate techniques, including VAEs and other methods, for defining cell-type-specific expression signatures from the HCA's single-cell datasets by measuring their ability to decompose bulk, whole-tissue autoimmune/rheumatic disease data.
 
 We will generate simulated bulk datasets drawn from purified cell lineages by combining the purified cell expression data at different proportions.
 We will also build a multi-tissue autoimmune/rheumatic disease compendium from existing public data of bulk tissues.
-We have curated a relevant set of datasets to date of more than 12,000 samples.
+We have curated a relevant set of datasets that contain more than 12,000 samples.
 This compendium includes samples from patients with systemic lupus erythematosus (SLE), sarcoidosis, and inflammatory bowel disorders among many other diseases.
-This compendium will have desirable properties for evaluating single-cell data-derived signatures, as it will allow us to evaluate cell type proportions and phenotypes based on a body of previous literature.
-For instance, we expect to detect higher proportions of activated macrophages in lupus nephritis samples as compared to controls [@doi:10.4049/jimmunol.1103031].
+This compendium will allow us to evaluate single-cell data-derived signatures in the context of cell type proportions and phenotypes based on a body of previous literature.
+For instance, we expect to detect higher proportions of activated macrophages in lupus nephritis samples than controls [@doi:10.4049/jimmunol.1103031].
 
 We will produce bulk compendia (simulated and real data) that will enable HCA participants (methods developers, RNA-seq assay developers) to directly compare approaches where we expect their most immediate translational impact: application to existing datasets to explain disease-relevant phenomena via a single-cell perspective.
 
 ### Proposal for evaluation and dissemination.
 
 We will apply methods that produce low-dimensional representations including VAEs (Aim 1) and other methods to HCA-produced single cell transcriptomes.
-These low-dimensional representations will be used in evaluations to test latent space arithmetic and relevance to disease.
-Source code that reproducibly generates these models will be released via GitHub as it is developed, and we may produce a manuscript on the topic.
-Models will be disseminated via periodic release on Zenodo or a similar platform.
+We will test these low-dimensional representations via latent space arithmetic and relevance to disease.
+Source code that generates low-dimensional models will be released via GitHub, and we may produce a manuscript on the topic.
+Models and datasets will be disseminated via periodic release on Zenodo or a similar platform.
 
 #### Evaluate the extent to which low-dimensional representations enable latent space arithmetic in the HCA.
 
@@ -134,42 +134,34 @@ For instance, a GAN learned latent features that could be manipulated with arith
 We will evaluate the extent to which this is true for low-dimensional representations of the HCA's single-cell transcriptomes.
 We describe two experiments using data proposed by Arjun Raj's group (Collaborative Network), but any HCA benchmark datasets with similar properties will be suitable.
 
-The Raj lab proposes to generate data related to cardiomyocte differentiation from fibroblasts.
+The Raj lab proposes to assay cardiomyocte differentiation from fibroblasts.
 The driving transcription factors for this process have been identified [@doi:10.1016/j.cell.2010.07.002].
-A latent space vector between these two cell types should capture the key transcription factor networks (Gata4, Mef2c, and Tbx5).
-To calculate this vector we will subtract the latent space projections of human fibroblasts from cardiomyocytes.
-We will compare the gene composition of this differentiation vector to target calls from cistrome [@doi:10.1093/nar/gkw983], which are available for each of these TFs.
+A latent space vector between these two cell types should capture the key transcription factor (TF) networks (Gata4, Mef2c, and Tbx5).
+To calculate this vector we will subtract the latent space projections of fibroblasts from cardiomyocytes.
+We will compare the gene composition of this differentiation vector to TF-target calls from cistrome [@doi:10.1093/nar/gkw983], which are available for each of these TFs.
 
 Latent space arithmetic can also generate new hypothetical data.
-We will test the extent to which these models can predict the results of perturbations using perturbation data that Arjun Raj's lab is generating with homogenized cell types.
+We will test the extent to which these models predict the results of perturbations using data that Arjun Raj's homogenized cell type data.
 For each perturbation, we will hold out one or more cell types and map the rest into the latent space.
 Subtracting the latent space vector of included cell types from those after perturbation will produce a perturbation vector.
-We will add the perturbation vector to one of the cell types for which the perturbation was withheld to generate synthetic data, and we will compare the results to the actual held out data to determine the prediction error.
-Comparing all results for low-dimensional methods to the baseline method of analogous transformations in raw gene expression space allow us to determine the extent to which these approaches predict perturbations.
+We will add the perturbation vector to a withheld cell type to generate synthetic data and compare the synthetic and observed results to determine the prediction error.
+Comparing low-dimensional methods to a baseline of analogous transformations on raw gene expression can reveal whether or not these approaches more accurately predict perturbations.
 
 #### Rheumatic Disease Evaluation
 
-We will input signatures from low-dimensional projections into existing techniques [@doi:10.1186/s13059-016-1070-5 @doi:10.1093/bioinformatics/btv015] that decompose bulk data with cell type signatures and evaluate concordance with ground truth on Aim 2's simulated dataset.
-Comparing performance across decomposition techniques allows us to measure each method's ability to define bulk-relevant signatures from single cell data.
+We will input signatures from low-dimensional projections into existing techniques that decompose bulk data with cell type signatures [@doi:10.1186/s13059-016-1070-5 @doi:10.1093/bioinformatics/btv015] and evaluate concordance with ground truth on Aim 2's simulated dataset.
+Comparing performance with multiple decomposition techniques allows us to benchmark methods' abilities to define bulk-relevant signatures from HCA data.
 We will also use signatures to decompose the rheumatic disease compendium (Aim 2).
 This compendium includes studies of highly-targeted therapeutics (e.g., a monoclonal antibody to IFN-gamma in the context of systemic lupus erythematosus [@doi:10.1002/art.39248]).
 We will use low-dimensional representations to determine what cell-types change in proportion during the reduction of this cytokine or if the IFN-inducible expression is preferentially altered in one cell type.
 At this stage, we will use such analyses to identify cases where methods disagree, with the aim of selecting a set to directly probe in future experiments (beyond the one-year timeline) to produce periodic ground-truth benchmarks.
-Real and simulated datasets will be disseminated as they are developed via periodic release on Zenodo or a similar platform.
 
 ### Statement of commitment to share
 
 We commit to sharing proposals, methods, data, and code publicly under open licenses.
 We understand that our proposal will be shared if it is funded: we [shared it publicly under a CC-BY license](https://github.com/greenelab/czi-rfa) as it was written.
 
-## References (non-doi)
-1.  Smolensky, P. Information processing in dynamical systems: Foundations of harmony theory. In D. Rumelhart and J. McClelland
-(Eds.), Parallel distributed processing, vol. 1, chapter 6, 194–281. Cambridge: MIT Press (1986).
-4.  Gregor, K., Danihelka, I., Graves, A., Rezende, D. J., Wierstra, D. DRAW: A Recurrent Neural Network for Image Generation. ArXiv150204623 Cs Stat (2015).
-5.  Osokin, A., Chessel, A., Carazo Salas, R. E., & Vaggi, F. GANs for Biological Image Synthesis. ArXiv170804692 Cs Stat (2017).
-6.  FaceApp - Free Neural Face Transformation Filters. Accessed 2017-08-24. https://www.faceapp.com
-7.  Way, G. P., & Greene, C.S. Extracting a Biologically Relevant Latent Space from Cancer Transcriptomes with Variational Autoencoders. bioRxiv. https://doi.org/10.1101/174474 (2017).
-8.  Liao, Q., Leibo, J. Z., Poggio, T. Learning invariant representations and applications to face verification. Advances in Neural Information Processing Systems 26 (2013).
+## References (Attached)
 
 ## Biosketch (Attached)
 
