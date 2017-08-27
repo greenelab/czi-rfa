@@ -108,30 +108,29 @@ We will evaluate resulting models for their applicability to rheumatic disease a
 
 The HCA's partnership with the Immunological Genome Project (immgenH) will provide single-cell gene expression-based immunocyte phenotyping at an unprecedented resolution.
 A compendium comprised of bulk gene expression data from autoimmune/rheumatic diseases is exceptionally well-suited to evaluating the disease relevance of these immunocyte data.
-The _objective of this aim_ is to build and share real and simulated benchmark datasets to evaluate the quality of the cell-type-specific signatures.
+The _objective of this aim_ is to build and share real and simulated benchmark datasets to evaluate the quality of the cell-type signatures.
 This will allow CZI to evaluate techniques, including VAEs and other methods, for defining cell-type-specific expression signatures from the HCA's single-cell datasets by measuring their ability to decompose bulk, whole-tissue autoimmune/rheumatic disease data.
 
-We will generate simulated bulk datasets drawn from purified cell lineages by combining the purified cell expression data at different proportions.
-We will also build a multi-tissue autoimmune/rheumatic disease compendium from existing public data of bulk tissues.
-We have curated a relevant set of datasets that contain more than 12,000 samples.
+We will generate simulated bulk datasets drawn from HCA-identified cell types by combining their expression profiles at different proportions.
+We will also build a multi-tissue autoimmune/rheumatic disease compendium from existing public datasets that we have curated (currently more than 12,000 samples).
 This compendium includes samples from patients with systemic lupus erythematosus (SLE), sarcoidosis, and inflammatory bowel disorders among many other diseases.
-This compendium will allow us to evaluate single-cell data-derived signatures in the context of cell type proportions and phenotypes based on a body of previous literature.
+Such a compendium lets us determine the extent to which HCA-derived cell type signatures capture disease-relevant information in a way that matches previous literature.
 For instance, we expect to detect higher proportions of activated macrophages in lupus nephritis samples than controls [@doi:10.4049/jimmunol.1103031].
 
-We will produce bulk compendia (simulated and real data) that will enable HCA participants (methods developers, RNA-seq assay developers) to directly compare approaches where we expect their most immediate translational impact: application to existing datasets to explain disease-relevant phenomena via a single-cell perspective.
+These bulk compendia (simulated and real data) will enable HCA participants (computational-method and molecular-assay developers) to directly compare approaches where we expect their most immediate translational impact: application to existing datasets to explain disease-relevant phenomena via a single-cell perspective.
 
 ### Proposal for evaluation and dissemination.
 
 We will apply methods that produce low-dimensional representations including VAEs (Aim 1) and other methods to HCA-produced single cell transcriptomes.
-We will test these low-dimensional representations via latent space arithmetic and relevance to disease.
 Source code that generates low-dimensional models will be released via GitHub, and we may produce a manuscript on the topic.
 Models and datasets will be disseminated via periodic release on Zenodo or a similar platform.
+We will test these low-dimensional representations via latent space arithmetic and relevance to disease as described below.
 
 #### Evaluate the extent to which low-dimensional representations enable latent space arithmetic in the HCA.
 
 Certain classes of generative deep neural network models, including VAEs and GANs have been shown to imbue intuitive mathematical features to the learned latent features [@arxiv:1312.6114 @arxiv:1406.2661].
-For instance, a GAN learned latent features that could be manipulated with arithmetic: Subtracting out the essence of a smile from a woman and adding it to a neutral man resulted in an image vector of a smiling man [@arxiv:1511.06434].
-We will evaluate the extent to which this is true for low-dimensional representations of the HCA's single-cell transcriptomes.
+For instance, a GAN learned latent features that could be manipulated with arithmetic: subtracting out the vector of a smile from a woman and adding it to a man with a neutral face resulted in an image of a smiling man [@arxiv:1511.06434].
+We will evaluate the extent to which these properties exist for low-dimensional representations of the HCA's single-cell transcriptomes.
 We describe two experiments using data proposed by Arjun Raj's group (Collaborative Network), but any HCA benchmark datasets with similar properties will be suitable.
 
 The Raj lab proposes to assay cardiomyocte differentiation from fibroblasts.
@@ -151,10 +150,11 @@ Comparing low-dimensional methods to a baseline of analogous transformations on 
 
 We will input signatures from low-dimensional projections into existing techniques that decompose bulk data with cell type signatures [@doi:10.1186/s13059-016-1070-5 @doi:10.1093/bioinformatics/btv015] and evaluate concordance with ground truth on Aim 2's simulated dataset.
 Comparing performance with multiple decomposition techniques allows us to benchmark methods' abilities to define bulk-relevant signatures from HCA data.
-We will also use signatures to decompose the rheumatic disease compendium (Aim 2).
-This compendium includes studies of highly-targeted therapeutics (e.g., a monoclonal antibody to IFN-gamma in the context of systemic lupus erythematosus [@doi:10.1002/art.39248]).
-We will use low-dimensional representations to determine what cell-types change in proportion during the reduction of this cytokine or if the IFN-inducible expression is preferentially altered in one cell type.
-At this stage, we will use such analyses to identify cases where methods disagree, with the aim of selecting a set to directly probe in future experiments (beyond the one-year timeline) to produce periodic ground-truth benchmarks.
+We will also use signatures to decompose the rheumatic disease compendium.
+We can easily ask which methods produce cell-type signatures that explain the most variance in the compendium.
+But we can also use experiments within the compendium, such as studies of highly-targeted therapeutics (e.g., a monoclonal antibody to IFN-gamma in the context of systemic lupus erythematosus [@doi:10.1002/art.39248]), to develop additional data-driven hypotheses.
+In the case if the IFN-gamma antibody, we can use various methods to predict which cell-types change in proportion or pathway activation during the reduction of this cytokine.
+These analyses will allow us to identify disease-relevant cases where methods disagree, laying the groundwork for targeted experiments (beyond the one-year timeline) that directly probe these processes to produce informative ground-truth benchmarks.
 
 ### Statement of commitment to share
 
