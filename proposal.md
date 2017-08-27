@@ -79,7 +79,7 @@ We also bring workflow automation experience to the HCA community [@doi:10.1038/
 
 #### Aim 1: Develop proof-of-concept unsupervised deep learning methods for single cell transcriptomic data from the HCA.
 
-The _objective of this aim_ is to implement and test approaches to build deep generative models, such as VAEs [@arxiv:1312.6114] and GANs [@arxiv:1406.2661], from the HCA's single cell RNA-seq data.
+The _objective of this aim_ is to implement and test approaches to build deep generative models, such as VAEs [@arxiv:1312.6114] and GANs [@arxiv:1406.2661], from HCA single cell RNA-seq data.
 
 Single cell data pose unique opportunities, but also challenges, for deep neural network algorithms.
 Many cells are often assayed, and many observations are needed to use deep learning effectively.
